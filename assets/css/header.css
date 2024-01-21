@@ -13,5 +13,45 @@
 .header .title {
   text-align: center;
   font-family: "Neue Machina";
-  font-size: 1.5rem;
+}
+
+.information {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.information p {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.125rem;
+  margin: 0.5rem;
+}
+
+.information p::before {
+  display: inline-block;
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-right: 0.5rem;
+}
+
+.information .job::before {
+  background-image: url("/assets/img/icons/job-icon.svg");
+}
+
+.information .location::before {
+  background-image: url("/assets/img/icons/location-icon.svg");
+}
+
+.information .phone::before {
+  background-image: url("/assets/img/icons/phone-icon.svg");
+}
+
+.information .email::before {
+  background-image: url("/assets/img/icons/email-icon.svg");
 }
