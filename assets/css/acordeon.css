@@ -38,6 +38,7 @@
   background-size: contain;
   background-image: url("/assets/img/icons/arrow.svg");
   transform: rotate(180deg);
+  transition: 0.25s;
 }
 
 .acordeon.open .trigger::after {
@@ -45,9 +46,14 @@
 }
 
 .acordeon .content {
-  display: none;
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .acordeon.open .content {
   display: inline-block;
+  height: auto;
+  opacity: 1;
 }
