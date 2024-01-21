@@ -1,7 +1,22 @@
 .header {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.header::after {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  content: "";
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url("/assets/img/icons/header-icon.svg");
+  cursor: pointer;
 }
 
 .header .photo {
@@ -54,4 +69,31 @@
 
 .information .email::before {
   background-image: url("/assets/img/icons/email-icon.svg");
+}
+
+@media only screen and (min-width: 768px) {
+  .header {
+    display: grid;
+    grid-template-areas: "photo title" "photo information";
+  }
+
+  .header::after {
+    top: 1rem;
+    right: 2rem;
+  }
+
+  .header .photo {
+    grid-area: photo;
+    margin: 0 auto;
+  }
+
+  .header .title {
+    grid-area: title;
+    text-align: start;
+    max-width: 300px;
+  }
+
+  .header .information {
+    grid-area: information;
+  }
 }
