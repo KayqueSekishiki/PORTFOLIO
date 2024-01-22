@@ -53,7 +53,8 @@
 }
 
 .acordeon.open .content {
-  display: inline-block;
+  display: block;
   height: auto;
   opacity: 1;
+  padding: 1rem;
 }
