@@ -48,6 +48,15 @@ main::after {
   z-index: -1;
 }
 
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 @media only screen and (min-width: 768px) {
   main::before {
     top: -10rem;

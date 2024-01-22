@@ -34,12 +34,3 @@
   background-image: url("/assets/img/icons/github-icon.svg");
   margin-right: 0.5rem;
 }
-
-.portfolio li a {
-  color: #ffffff;
-  text-decoration: none;
-}
-
-.portfolio li a:hover {
-  text-decoration: underline;
-}
