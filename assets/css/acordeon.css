@@ -41,7 +41,7 @@
   height: 1.5rem;
   background-repeat: no-repeat;
   background-size: contain;
-  background-image: url("/assets/img/icons/arrow-icon.svg");
+  background-image: url("../img/icons/arrow-icon.svg");
   transform: rotate(180deg);
   transition: 0.25s;
 }
