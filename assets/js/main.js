@@ -94,6 +94,12 @@ function updateProfessionalExperience(profileData) {
     .join("");
 }
 
+function updateFooter(profileData) {
+  const dio = document.getElementById("dio");
+
+  dio.href = profileData.dio;
+}
+
 (async () => {
   const profileData = await fetchProfileData();
   updateProfileInfo(profileData);
@@ -102,4 +108,5 @@ function updateProfessionalExperience(profileData) {
   updateLanguages(profileData);
   updatePortfolio(profileData);
   updateProfessionalExperience(profileData);
+  updateFooter(profileData);
 })();

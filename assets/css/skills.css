@@ -3,6 +3,10 @@
   flex-direction: column;
 }
 
+.skills .tools {
+  max-width: 13rem;
+}
+
 .skills .tools ul {
   display: flex;
   flex-direction: row;
@@ -15,7 +19,7 @@
 }
 
 .skills .tools ul li img {
-  max-width: 50px;
+  width: 2.25rem;
   margin: 1rem 1rem;
 }
 
@@ -29,19 +33,21 @@
 }
 
 .skills .personal ul li {
-  width: 8rem;
+  width: 7rem;
   margin-left: 2rem;
   padding: 0.5rem;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 375px) {
+  .skills .tools ul li {
+    width: 33%;
+  }
+}
+
+@media only screen and (min-width: 550px) {
   .skills {
     display: grid;
     grid-template-columns: 1fr 1fr;
-  }
-
-  .skills .tools ul li {
-    width: 33%;
   }
 
   .skills .personal ul {
