@@ -61,6 +61,44 @@
     "Espanhol (Intermediário)",
     "Finlandês (Iniciante)"
   ],
+  "education": {
+    "dio": [
+      {
+        "name": "Lua Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/62104148-bf3c-4c12-998a-b08891730747.png"
+      },
+      {
+        "name": "Desenvolvimento de Jogos - iFood",
+        "logo": "https://hermes.dio.me/tracks/83f8150a-6429-4c1a-9207-d5bff610f647.png"
+      },
+      {
+        "name": "Programação do Zero - iFood",
+        "logo": "https://hermes.dio.me/tracks/9388e8d8-00d5-4007-a7c9-357324fe73fa.png"
+      },
+      {
+        "name": "Decola Tech - Avanade",
+        "logo": "https://hermes.dio.me/tracks/6bb40420-5f89-4902-8df7-3399674d9d84.png"
+      },
+      {
+        "name": "Javascript Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/55e7040f-775b-47e5-a8fb-69d002ca17a9.png"
+      }
+    ],
+    "graduations": [
+      {
+        "name": "Universidade Salvador",
+        "Course": "Bacharelado em Design de Jogos",
+        "period": "Junho de 2024",
+        "status": "Em andamento"
+      },
+      {
+        "name": "Universidade Estácio",
+        "Course": "Pós-graduração em Desenvolvimento Mobile",
+        "period": "Dezembro de 2024",
+        "status": "Em andamento"
+      }
+    ]
+  },
   "portfolio": [
     {
       "name": "(WEB) Lista de tarefas realizada com React e Typescript",
