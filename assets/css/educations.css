@@ -1,0 +1,39 @@
+.educations {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.educations title {
+  display: flex;
+  text-align: center;
+}
+
+.educations .courses {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.educations .courses li {
+  list-style: none;
+}
+
+.educations .courses li img {
+  width: 4rem;
+  margin: 1rem 1rem;
+}
+
+.educations .graduations {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}

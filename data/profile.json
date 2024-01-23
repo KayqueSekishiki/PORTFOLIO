@@ -61,7 +61,7 @@
     "Espanhol (Intermediário)",
     "Finlandês (Iniciante)"
   ],
-  "education": {
+  "educations": {
     "dio": [
       {
         "name": "Lua Developer - DIO",
@@ -87,7 +87,7 @@
     "graduations": [
       {
         "name": "Universidade Salvador",
-        "Course": "Bacharelado em Design de Jogos",
+        "course": "Bacharelado em Design de Jogos",
         "period": "Junho de 2024",
         "status": "Em andamento"
       },

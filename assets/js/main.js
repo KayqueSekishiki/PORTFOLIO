@@ -55,6 +55,31 @@ function updateLanguages(profileData) {
     .join("");
 }
 
+function updateEducations(profileData) {
+  const dioCourses = document.getElementById("profile.educations.dio");
+  const graduations = document.getElementById("profile.educations.graduations");
+
+  dioCourses.innerHTML = profileData.educations.dio
+    .map(
+      (course) => ` 
+      <li>
+      <img src="${course.logo}" alt="course.name" />
+    </li>`
+    )
+    .join("");
+
+  graduations.innerHTML = profileData.educations.graduations
+    .map(
+      (graduation) => ` 
+      <li>
+      <h3 class="title">${graduation.name} - ${graduation.course} </h3>
+      <p class="period">${graduation.period} (${graduation.status})</p>
+    </li>
+    `
+    )
+    .join("");
+}
+
 function updatePortfolio(profileData) {
   const portfolio = document.getElementById("profile.portfolio");
 
