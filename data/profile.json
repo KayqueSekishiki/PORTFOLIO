@@ -58,8 +58,7 @@
   "languages": [
     "Português (Nativo)",
     "Inglês (Intermediário)",
-    "Espanhol (Intermediário)",
-    "Finlandês (Iniciante)"
+    "Espanhol (Básico)"
   ],
   "educations": {
     "dio": [
@@ -93,7 +92,7 @@
       },
       {
         "name": "Universidade Estácio",
-        "Course": "Pós-graduração em Desenvolvimento Mobile",
+        "course": "Pós-graduração em Desenvolvimento Mobile",
         "period": "Dezembro de 2024",
         "status": "Em andamento"
       }

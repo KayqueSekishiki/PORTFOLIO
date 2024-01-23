@@ -71,7 +71,7 @@
   background-image: url("../img/icons/email-icon.svg");
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 650px) {
   .header {
     display: grid;
     grid-template-areas: "photo title" "photo information";

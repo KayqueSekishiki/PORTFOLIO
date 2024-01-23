@@ -131,6 +131,7 @@ function updateFooter(profileData) {
   updateSoftSkills(profileData);
   updateHardSkills(profileData);
   updateLanguages(profileData);
+  updateEducations(profileData);
   updatePortfolio(profileData);
   updateProfessionalExperience(profileData);
   updateFooter(profileData);

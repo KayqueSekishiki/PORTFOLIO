@@ -1,7 +1,8 @@
 .languages {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
   flex-wrap: wrap;
 
   margin: 0;
@@ -26,4 +27,12 @@
   background-size: contain;
   background-image: url("../img/icons/check-icon.svg");
   margin-right: 0.5rem;
+}
+
+@media only screen and (min-width: 700px) {
+  .languages {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+  }
 }

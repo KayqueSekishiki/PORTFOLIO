@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.skills .tools {
-  max-width: 13rem;
-}
-
 .skills .tools ul {
   display: flex;
   flex-direction: row;
@@ -33,23 +29,12 @@
 }
 
 .skills .personal ul li {
-  width: 7rem;
+  width: 9rem;
   margin-left: 2rem;
   padding: 0.5rem;
 }
 
-@media only screen and (min-width: 375px) {
-  .skills .tools ul li {
-    width: 33%;
-  }
-}
-
-@media only screen and (min-width: 550px) {
-  .skills {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-
+@media only screen and (min-width: 405px) {
   .skills .personal ul {
     flex-direction: row;
     flex-wrap: wrap;
@@ -57,5 +42,31 @@
     align-items: center;
     margin: 0;
     padding: 0;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .skills {
+    display: grid;
+    grid-template-columns: 16rem 1fr;
+  }
+
+  .skills .tools {
+    width: 15rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .skills .tools ul li img {
+    width: 3rem;
+  }
+
+  .skills .personal ul li {
+    font-size: 1.25rem;
+  }
+}
+@media only screen and (min-width: 721px) {
+  .skills .personal ul li {
+    margin-bottom: 1rem;
   }
 }
