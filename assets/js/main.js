@@ -62,7 +62,7 @@ function updatePortfolio(profileData) {
     .map(
       (project) => ` 
       <li>
-      <h3 ${project.github ? "class={github}" : ""}>${project.name}</h3>
+      <h3  class=${project.github ? "github" : ""}>${project.name}</h3>
       <a target="_blank" href="${project.url}">
       ${project.url}
       </a>

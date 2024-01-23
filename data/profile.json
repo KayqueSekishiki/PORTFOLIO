@@ -63,24 +63,24 @@
   ],
   "portfolio": [
     {
-      "name": "(WEB) Lista de tarefas realizada com React e Typescript",
+      "name": "Lista de tarefas realizada com React e Typescript<br />(WEB)",
       "url": "https://github.com/KayqueSekishiki/Projeto_TODO_ReactTS",
       "github": true
     },
     {
-      "name": "(WEB Game) Reprodução do tradicional jogo da cobrinha realizado com Vanilla",
+      "name": "Reprodução do tradicional jogo da cobrinha realizado com Vanilla<br />(WEB Game) ",
       "url": "https://github.com/KayqueSekishiki/SnakeGame_JS",
       "github": true
     },
     {
-      "name": "(Game Mobile) Jogo no estilo Hypercasual 3D realizado com Unity e C#",
+      "name": "Jogo no estilo Hypercasual 3D realizado com Unity e C#<br />(Game Mobile) ",
       "url": "https://github.com/KayqueSekishiki/Hypercasual",
       "github": true
     },
     {
-      "name": "(Game) <br /> Jogo de plataforma 2D realziado com Unity e C#",
+      "name": "Jogo de plataforma 2D realziado com Unity e C#<br />(Game)",
       "url": "https://github.com/KayqueSekishiki/MetroidvaniaProject",
-      "github": false
+      "github": true
     }
   ],
   "professionalExperience": [
