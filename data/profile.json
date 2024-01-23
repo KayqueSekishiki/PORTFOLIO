@@ -5,31 +5,45 @@
   "location": "Salvador - BA",
   "phone": "(71) 99326-2967",
   "email": "kayquelopes@outlook.com.br",
+  "github": "https://github.com/KayqueSekishiki",
+  "dio": "https://www.dio.me/users/kayquelopes",
   "skills": {
     "hardSkills": [
       {
-        "name": "Nodejs",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/nodejs.png"
+        "name": "HTML5",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/html-icon.svg"
       },
       {
-        "name": "Java",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/java.png"
+        "name": "CSS3",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/css-icon.svg"
       },
       {
-        "name": "Angular",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/angular.png"
+        "name": "JavaScript",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/javascript-icon.svg"
+      },
+      {
+        "name": "TypeScript",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/typescript-icon.svg"
+      },
+      {
+        "name": "CSharp",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/csharp-icon.svg"
       },
       {
         "name": "React",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/react.png"
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/react-icon.svg"
       },
       {
-        "name": "Mongodb",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/mongodb.png"
+        "name": "NodeJS",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/node-icon.svg"
       },
       {
         "name": "Postgresql",
-        "logo": "https://raw.githubusercontent.com/digitalinnovationone/js-developer-portfolio/main/data/imgs/postgresql.png"
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/postgree-icon.svg"
+      },
+      {
+        "name": "Unity Engine",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/unity-icon.svg"
       }
     ],
     "softSkills": [
