@@ -63,6 +63,10 @@
   "educations": {
     "dio": [
       {
+        "name": "Orbi Web Games Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/5a0ef2bf-8cca-4be7-b506-3945fbb8f1d4.png"
+      },
+      {
         "name": "Lua Developer - DIO",
         "logo": "https://hermes.dio.me/tracks/62104148-bf3c-4c12-998a-b08891730747.png"
       },
@@ -116,7 +120,7 @@
     },
     {
       "name": "(Game) Jogo de plataforma 2D realziado com Unity e C#)",
-      "url": "https://github.com/KayqueSekishiki/MetroidvaniaProject",
+      "url": "https://github.com/KayqueSekishiki/Tale_of_Birds_Song",
       "github": true
     }
   ],
