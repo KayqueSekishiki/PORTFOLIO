@@ -1,7 +1,7 @@
 {
   "name": "Kayque Sekishiki",
   "photo": "https://avatars.githubusercontent.com/u/104032451?v=4",
-  "job": "Junior Developer",
+  "job": "Game and Frontend Developer JR",
   "location": "Salvador - BA",
   "phone": "(71) 99326-2967",
   "email": "kayquelopes@outlook.com.br",
@@ -63,6 +63,10 @@
   "educations": {
     "dio": [
       {
+        "name": "React Native Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/a2d3983e-01db-4cfb-9402-fdedae795af0.png"
+      },
+      {
         "name": "Orbi Web Games Developer - DIO",
         "logo": "https://hermes.dio.me/tracks/5a0ef2bf-8cca-4be7-b506-3945fbb8f1d4.png"
       },
@@ -98,11 +102,16 @@
         "name": "Universidade Estácio",
         "course": "Pós-graduração em Desenvolvimento Mobile",
         "period": "Dezembro de 2024",
-        "status": "Em andamento"
+        "status": "Trancado"
       }
     ]
   },
   "portfolio": [
+    {
+      "name": "(Mobile) Meu curriculo feito com React Native e Typescript",
+      "url": "https://github.com/KayqueSekishiki/react-nav",
+      "github": true
+    },
     {
       "name": "(WEB) Lista de tarefas realizada com React e Typescript",
       "url": "https://github.com/KayqueSekishiki/Projeto_TODO_ReactTS",
@@ -125,6 +134,16 @@
     }
   ],
   "professionalExperience": [
+    {
+      "name": "Embaixador Digital Innovation One",
+      "period": "Mar 2024 - Presente",
+      "description": "Programa de embaixadores da DIO, na qual recebemos treinamento com foco em liderança, comunicação e networking."
+    },
+    {
+      "name": "Indie Game Developer",
+      "period": "Jan 2024 - Presente",
+      "description": "Desenvolvedor independente de jogos como o foco em publicações na plataforma da itchio e futuramente steam e play store."
+    },
     {
       "name": "Desenvolvedor Unity / Animuz Game Experience LTDA",
       "period": "Out 2023 - Dez 2023",
