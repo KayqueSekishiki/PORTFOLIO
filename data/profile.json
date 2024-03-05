@@ -34,6 +34,10 @@
         "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/react-icon.svg"
       },
       {
+        "name": "React Native",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/react_native-icon.svg"
+      },
+      {
         "name": "NodeJS",
         "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/node-icon.svg"
       },
@@ -42,8 +46,16 @@
         "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/postgree-icon.svg"
       },
       {
+        "name": "MongoDB",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/mongodb-icon.svg"
+      },
+      {
         "name": "Unity Engine",
         "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/unity-icon.svg"
+      },
+      {
+        "name": "Unreal Engine",
+        "logo": "https://raw.githubusercontent.com/KayqueSekishiki/PORTFOLIO/main/data/img/unreal-icon.svg"
       }
     ],
     "softSkills": [
@@ -62,6 +74,10 @@
   ],
   "educations": {
     "dio": [
+      {
+        "name": "CSS Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/da043c7a-7189-441e-bf28-adc2d05a4934.png"
+      },
       {
         "name": "React Native Developer - DIO",
         "logo": "https://hermes.dio.me/tracks/a2d3983e-01db-4cfb-9402-fdedae795af0.png"
