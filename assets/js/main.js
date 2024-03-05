@@ -5,7 +5,6 @@ function updateProfileInfo(profileData) {
   const location = document.getElementById("profile.location");
   const phone = document.getElementById("profile.phone");
   const email = document.getElementById("profile.email");
-  const cv = document.getElementById("profile.cv--modal");
 
   photo.src = profileData.photo;
   photo.alt = profileData.name;
@@ -16,7 +15,6 @@ function updateProfileInfo(profileData) {
   phone.href = `tel:{profileData.phone}`;
   email.innerHTML = profileData.email;
   email.href = `mailto:{profileData.email}`;
-  cv.children.href = profileData.cv;
 }
 
 function updateSoftSkills(profileData) {
