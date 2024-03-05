@@ -5,7 +5,7 @@
   align-items: center;
 }
 
-.header .cv--trigger {
+.header .cv {
   position: absolute;
   top: 0.5rem;
   right: 0.5rem;
@@ -18,28 +18,24 @@
   cursor: pointer;
 }
 
-.header .cv--modal {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  display: none;
-  justify-content: center;
-  align-items: center;
-
-  padding: 0.75rem 3rem;
-  border-radius: 1rem;
-
-  font-weight: bold;
-  font-size: 1.5rem;
-
-  border: none;
-  outline: none;
-  background: #111111;
-  cursor: pointer;
-  z-index: 0;
+.header .photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
 }
 
-.header .cv--modal:before {
+.header .container-photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #00ffd5;
+}
+
+.header .container-photo:before {
   content: "";
   background: linear-gradient(
     45deg,
@@ -62,43 +58,20 @@
   width: calc(100% + 4px);
   height: calc(100% + 4px);
   animation: glowing 20s linear infinite;
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
-  border-radius: 10px;
-}
-
-.header .cv--modal:active {
-  color: #000000;
-}
-
-.header .cv--modal:active:after {
-  background: transparent;
-}
-
-.header .cv--modal:hover:before {
   opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 50%;
 }
 
-.header .cv--modal:after {
+.header .container-photo:after {
   z-index: -1;
   content: "";
   position: absolute;
   width: 100%;
   height: 100%;
-  background: #111111;
   left: 0;
   top: 0;
   border-radius: 0.625rem;
-}
-
-.header .cv--modal:hover {
-  background-color: blue;
-}
-
-.header .photo {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
 }
 
 .header .title {
@@ -153,12 +126,16 @@
     grid-template-areas: "photo title" "photo information";
   }
 
-  .header .more {
+  .header .cv--trigger {
     top: 1rem;
     right: 2rem;
   }
 
-  .header .photo {
+  .header .cv--modal {
+    font-size: 1.5rem;
+  }
+
+  .header .container-photo {
     grid-area: photo;
     margin: 0 auto;
   }
@@ -183,5 +160,17 @@
   }
   100% {
     background-position: 0 0;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }

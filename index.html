@@ -41,12 +41,14 @@
   <body>
     <main>
       <header class="header">
-        <img
-          id="profile.photo"
-          class="photo"
-          src="assets/img/my-photo.png"
-          alt="Foto do Kayque"
-        />
+        <div class="container-photo">
+          <img
+            id="profile.photo"
+            class="photo"
+            src="assets/img/my-photo.png"
+            alt="Foto do Kayque"
+          />
+        </div>
         <h1 lass="title">
           Olá,<br />
           eu sou o<br />
@@ -65,17 +67,12 @@
           </p>
         </div>
         <div>
-          <img
-            id="profile.cv--trigger"
-            class="cv--trigger"
-            src="./assets/img/icons/header-icon.svg"
-            alt="cv--trigger"
-          />
-          <div id="profile.cv--modal" class="cv--modal">
-            <a href="./data/pdf/Kayque_Lopes.pdf" target="_blank"
-              >Download CV</a
-            >
-          </div>
+          <a href="./data/pdf/Kayque_Lopes.pdf" target="_blank"
+            ><img
+              id="profile.cv--trigger"
+              class="cv"
+              src="./assets/img/icons/header-icon.svg"
+          /></a>
         </div>
       </header>
 
