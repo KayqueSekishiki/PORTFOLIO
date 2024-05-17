@@ -63,6 +63,8 @@
       "Disciplinado",
       "Flexível",
       "Criativo",
+      "Comunicativo",
+      "Fácil Apredizado",
       "Trabalho em Equipe",
       "Comprometido<br /> com Resultados"
     ]
@@ -70,10 +72,15 @@
   "languages": [
     "Português (Nativo)",
     "Inglês (Intermediário)",
-    "Espanhol (Básico)"
+    "Espanhol (Básico)",
+    "Finladês (Iniciante)"
   ],
   "educations": {
     "dio": [
+      {
+        "name": "Criando Jogos com Godot - DIO",
+        "logo": "https://hermes.dio.me/tracks/96cafabd-f528-41f2-8724-ee665769d044.png"
+      },
       {
         "name": "Codecamp | 1st Edition",
         "logo": "https://hermes.dio.me/tracks/e3092c08-98c4-4131-aec1-f3affe6db45d.png"
@@ -124,6 +131,11 @@
   },
   "portfolio": [
     {
+      "name": "(WEB e Game PC) Jogo 2D realizado com Godot e GDScript",
+      "url": "https://github.com/KayqueSekishiki/Knightinho",
+      "github": true
+    },
+    {
       "name": "(Mobile) Meu curriculo feito com React Native e Typescript",
       "url": "https://github.com/KayqueSekishiki/react-nav",
       "github": true
@@ -144,16 +156,21 @@
       "github": true
     },
     {
-      "name": "(Game) Jogo de plataforma 2D realziado com Unity e C#)",
+      "name": "(Game PC) Jogo de plataforma 2D realizado com Unity e C#)",
       "url": "https://github.com/KayqueSekishiki/Tale_of_Birds_Song",
       "github": true
     }
   ],
   "professionalExperience": [
     {
-      "name": "Embaixador Digital Innovation One",
+      "name": "Desenvolvedor Godot e Social Media / Mad Cat House",
+      "period": "Abr 2024 - Presente",
+      "description": "Desenvolvimento de jogos utilizando Godot engine desde a prototipação, scripts para interfaces e mecanicas dos jogos, além da criação, monitoramento e atualização das redes sociais da empresa."
+    },
+    {
+      "name": "Embaixador Digital Innovation One / DIO",
       "period": "Mar 2024 - Presente",
-      "description": "Programa de embaixadores da DIO, na qual recebemos treinamento com foco em liderança, comunicação e networking."
+      "description": "Programa de treinamento com foco em liderança, comunicação, networking e desenvolvimentos de artigos sobre o mundo Tech."
     },
     {
       "name": "Indie Game Developer",
