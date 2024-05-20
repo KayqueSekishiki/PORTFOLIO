@@ -78,6 +78,10 @@
   "educations": {
     "dio": [
       {
+        "name": "Unity 3D Game Developer - DIO",
+        "logo": "https://hermes.dio.me/tracks/47c61911-32bf-4324-a249-124d4f33d03f.png"
+      },
+      {
         "name": "Criando Jogos com Godot - DIO",
         "logo": "https://hermes.dio.me/tracks/96cafabd-f528-41f2-8724-ee665769d044.png"
       },
