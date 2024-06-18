@@ -78,6 +78,10 @@
   "educations": {
     "dio": [
       {
+        "name": "Santander Coders 2024 | Front End - ADA TECH",
+        "logo": "https://avatars.githubusercontent.com/u/138834863?s=280&v=4"
+      },
+      {
         "name": "Unity 3D Game Developer - DIO",
         "logo": "https://hermes.dio.me/tracks/47c61911-32bf-4324-a249-124d4f33d03f.png"
       },
@@ -167,27 +171,22 @@
   ],
   "professionalExperience": [
     {
-      "name": "Desenvolvedor Godot e Social Media / Mad Cat House",
+      "name": "[Autônomo] Desenvolvedor Godot e Social Media / Mad Cat House",
       "period": "Abr 2024 - Presente",
       "description": "Desenvolvimento de jogos utilizando Godot engine desde a prototipação, scripts para interfaces e mecanicas dos jogos, além da criação, monitoramento e atualização das redes sociais da empresa."
     },
     {
-      "name": "Embaixador Digital Innovation One / DIO",
+      "name": "[Voluntário] Embaixador Digital Innovation One / DIO",
       "period": "Mar 2024 - Presente",
       "description": "Programa de treinamento com foco em liderança, comunicação, networking e desenvolvimentos de artigos sobre o mundo Tech."
     },
     {
-      "name": "Indie Game Developer",
-      "period": "Jan 2024 - Presente",
-      "description": "Desenvolvedor independente de jogos como o foco em publicações na plataforma da itchio e futuramente steam e play store."
-    },
-    {
-      "name": "Desenvolvedor Unity / Animuz Game Experience LTDA",
+      "name": "[Estágio] Desenvolvedor Unity / Animuz Game Experience LTDA",
       "period": "Out 2023 - Dez 2023",
       "description": "Estágio como desenvolvedor de jogos, na qual trabalhei na prototipação e desenvolvi scripts para a interface do usuário (UI e HUD) e mecânicas básicas do jogo. Atuei também na refatoração e melhoria de códigos visando as boas práticas."
     },
     {
-      "name": "Músico e Compositor / Transcendency Band",
+      "name": "[Autônomo] Músico e Compositor / Transcendency Band",
       "period": "Abr 2015 - Dez 2020",
       "description": "Atuei como músico autônomo exercendo a comunicação, criatividade e responsabilidade. Minhas principais atividades foram compor tocar e gravar músicas, organizar a agenda de shows e ensaios, criar networking com proprietários de casas de eventos, bares e estúdios e outras bandas."
     }
