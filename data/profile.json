@@ -78,6 +78,10 @@
   "educations": {
     "dio": [
       {
+        "name": "React Developer w/ Next and Cypress - DIO",
+        "logo": "https://hermes.dio.me/tracks/68c81887-a1c2-440d-a7ea-7777bc10cd41.png"
+      },
+      {
         "name": "Santander Coders 2024 | Front End - ADA TECH",
         "logo": "https://avatars.githubusercontent.com/u/138834863?s=280&v=4"
       },
@@ -124,16 +128,16 @@
     ],
     "graduations": [
       {
-        "name": "Universidade Salvador",
-        "course": "Bacharelado em Design de Jogos",
-        "period": "Junho de 2024",
+        "name": "Universidade Anhaguera",
+        "course": "Pós-graduração em Desenvolvimento Mobile",
+        "period": "Dezembro de 2024",
         "status": "Em andamento"
       },
       {
-        "name": "Universidade Estácio",
-        "course": "Pós-graduração em Desenvolvimento Mobile",
-        "period": "Dezembro de 2024",
-        "status": "Trancado"
+        "name": "Universidade Salvador",
+        "course": "Bacharelado em Design de Jogos",
+        "period": "Junho de 2024",
+        "status": "Concluído"
       }
     ]
   },
