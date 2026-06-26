@@ -1,5 +1,5 @@
 import Image from "next/image";
-import styles from "./ButtonPrimary.module.css";
+import styles from "./ButtonPrimary.module.scss";
 import ArrowRightIcon from "@/assets/arrow-right-icon.svg";
 
 type ButtonPrimaryProps = {

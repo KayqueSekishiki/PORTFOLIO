@@ -1,0 +1,95 @@
+@use "../../styles/mixins";
+@use "../../styles/animations";
+
+.cta {
+  position: relative;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: transparent;
+  color: var(--special-cyan);
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: visible;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 2px;
+
+    @include mixins.neon-gradient;
+    background-size: 300%;
+
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+  }
+
+  &::before {
+    filter: blur(2px);
+    animation: gradientMove 6s ease infinite;
+    z-index: 0;
+  }
+
+  &::after {
+    filter: blur(12px);
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+
+    transition:
+      opacity 0.3s ease,
+      filter 0.3s ease;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+
+    &::after {
+      opacity: 1;
+      filter: blur(14px);
+    }
+  }
+
+  &:active {
+    transform: scale(0.95);
+
+    &::after {
+      opacity: 1;
+      filter: blur(20px);
+    }
+  }
+}
+
+.rounded {
+  border-radius: 0.75rem;
+}
+
+.square {
+  border-radius: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+}
+
+.buttonIcon {
+  width: 1.2rem;
+  height: 1.2rem;
+}

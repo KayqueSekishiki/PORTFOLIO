@@ -1,0 +1,85 @@
+@use "../styles/mixins" as *;
+
+.highlighted {
+  @include neon-gradient;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+}
+
+.highlightedSweep {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+
+  @include neon-gradient;
+
+  background-clip: text;
+  -webkit-background-clip: text;
+
+  color: transparent;
+  overflow: hidden;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset-block: 0;
+    left: -150%;
+    width: 5%;
+
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(255, 255, 255, 0.8),
+      transparent
+    );
+
+    animation: lightSweep 3s ease-in-out infinite;
+  }
+}
+
+.animated {
+  background-size: 300%;
+  animation: gradientMove 6s ease infinite;
+}
+
+.borderAnimated {
+  position: relative;
+  padding: 2rem;
+  border-radius: 1rem;
+  overflow: hidden;
+
+  background: #0a0a0a;
+
+  &::before {
+    content: "";
+
+    @include absolute-fill;
+
+    padding: 3px;
+    border-radius: inherit;
+
+    @include neon-gradient;
+
+    background-size: 300%;
+    animation: gradientMove 6s ease infinite;
+
+    mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+  }
+
+  > * {
+    position: relative;
+    z-index: 1;
+  }
+}

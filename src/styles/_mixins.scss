@@ -1,0 +1,19 @@
+@mixin neon-gradient {
+  background: linear-gradient(
+    90deg,
+    var(--special-cyan),
+    var(--special-purple),
+    var(--special-pink)
+  );
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin absolute-fill {
+  position: absolute;
+  inset: 0;
+}

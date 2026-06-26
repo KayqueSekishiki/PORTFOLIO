@@ -1,0 +1,35 @@
+.cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  width: 4rem;
+  height: 4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 0.2rem solid var(--special-cyan);
+  border-radius: 0.25rem;
+
+  color: var(--special-cyan);
+  background: transparent;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 0 1rem var(--special-cyan);
+    transform: scale(1.05);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  img {
+    width: 2rem;
+    height: 2rem;
+  }
+}

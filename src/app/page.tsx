@@ -1,6 +1,6 @@
 import Image from "next/image";
 import RocketIcon from "../assets/rocket-icon.svg";
-import styles from "./home.module.css";
+import styles from "./home.module.scss";
 
 import ButtonPrimary from "@/components/ButtonPrimary/ButtonPrimary";
 
