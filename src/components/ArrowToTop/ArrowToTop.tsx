@@ -6,13 +6,13 @@ import { scrollToTop } from "@/utils/scrollToTop";
 
 const ArrowToTop = () => {
   return (
-    <a className={`${styles.cta}`} onClick={scrollToTop}>
+    <button className={`${styles.cta}`} onClick={scrollToTop}>
       <Image
         className={styles.buttonIcon}
         src={ArrowUpIcon}
         alt="Retornar ao ínicio da página"
       />
-    </a>
+    </button>
   );
 };
 
