@@ -1,3 +1,5 @@
+@use "../../styles/breakpoints" as bp;
+
 .header {
   position: fixed;
   top: 0;
@@ -130,7 +132,7 @@
   color: var(--tertiary);
 }
 
-@media (min-width: 768px) {
+@media (min-width: bp.$tablet) {
   .headerScrolled {
     backdrop-filter: blur(12px);
     background: rgba(13, 21, 22, 0.75);

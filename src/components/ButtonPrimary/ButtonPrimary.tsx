@@ -8,12 +8,7 @@ type ButtonPrimaryProps = {
 
 const ButtonPrimary = ({ href }: ButtonPrimaryProps) => {
   return (
-    <a
-      className={`${styles.cta}`}
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
+    <a className={`${styles.cta}`} href={href} rel="noopener noreferrer">
       Acessar
       <Image
         className={styles.buttonIcon}

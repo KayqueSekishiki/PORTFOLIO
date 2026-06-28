@@ -1,11 +1,11 @@
 @use "../styles/animations";
+@use "../styles/breakpoints" as bp;
 
 .page {
+  min-height: 100vh;
   display: flex;
-  flex: 1;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
   font-family: var(--font-geist-sans);
   background-color: var(--background);
@@ -15,14 +15,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-
-  gap: 2rem;
+  gap: 3rem;
   width: 100%;
-  max-width: 800px;
-
-  padding: 120px 60px;
-
+  margin: 0 auto;
+  padding: 7.5rem 3.75rem;
   background-color: var(--foreground);
 }
 
@@ -62,17 +58,28 @@
 
   text-align: center;
 
-  .title {
-    color: var(--special-cyan);
-    letter-spacing: 0.2rem;
-    font-weight: 400;
-  }
-
   h1 {
     font-size: 3rem;
   }
+}
 
+.title {
+  color: var(--special-cyan);
+  letter-spacing: 0.2rem;
+  font-weight: 400;
+}
+
+.tagline {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  opacity: 0.5;
+}
+
+@media (min-width: bp.$tablet) {
   .tagline {
-    opacity: 0.5;
+    flex-direction: row;
   }
 }

@@ -21,7 +21,9 @@ export default function Home() {
           <p className={styles.title}>Portfolio</p>
           <h1>Kayque Sekishiki</h1>
           <p className={styles.tagline}>
-            Engenheiro de Software - Desenvolvedor Web - Designer de jogos
+            <span>Engenheiro de Softwares</span>
+            <span>- Desenvolvedor Web -</span>
+            <span>Designer de Jogos</span>
           </p>
         </div>
         <ButtonPrimary href="/main" />
