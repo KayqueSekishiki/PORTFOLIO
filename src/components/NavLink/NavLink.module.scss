@@ -35,7 +35,33 @@
   }
 }
 
+.navButton-desktop {
+  display: none;
+  gap: 0.5rem;
+}
+
 .navButton {
   width: 14rem;
   height: 6.5rem;
+}
+
+@media (min-width: 768px) {
+  .navLink,
+  .navButton {
+    height: 2rem;
+    font-size: 1rem;
+    border: none;
+
+    .linkImage {
+      display: none;
+    }
+  }
+
+  .navButton {
+    display: none;
+  }
+
+  .navButton-desktop {
+    display: flex;
+  }
 }

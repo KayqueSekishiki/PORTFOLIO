@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 
 export default function Main() {
   return (
-    <div className={styles.page}>
+    <div>
       <Header />
       <ArrowToTop />
       <main className={styles.main}></main>
