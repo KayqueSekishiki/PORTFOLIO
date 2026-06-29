@@ -5,7 +5,7 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr;
-  align-items: center;
+
   max-width: 1280px;
   margin: auto;
   padding: 7.5rem 1.5rem;
@@ -14,7 +14,7 @@
 .content {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.25rem;
 
   .subtitle {
     color: var(--special-cyan);
@@ -56,15 +56,17 @@
 
 .buttons {
   display: flex;
-  gap: 1.5rem;
-  margin-top: 2rem;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.25rem;
 
   a {
     padding: 1rem 1.5rem;
     border-radius: 0.5rem;
-    transition: 0.3s;
-    text-transform: uppercase;
+    font-size: 0.75rem;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.3s;
 
     &:first-child {
       background: var(--special-cyan);
@@ -152,7 +154,7 @@
 .scroll {
   position: absolute;
   left: 50%;
-  bottom: 2.5rem;
+  bottom: 1rem;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
@@ -161,7 +163,7 @@
 
   span {
     font-size: 0.75rem;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1rem;
     color: var(--text-secondary);
   }
 }
@@ -174,6 +176,10 @@
 }
 
 @media (min-width: bp.$tablet) {
+  .hero {
+    align-items: center;
+  }
+
   .content {
     .subtitle {
       font-size: 1rem;
@@ -192,6 +198,10 @@
     a {
       padding: 1rem 2rem;
     }
+  }
+
+  .scroll {
+    bottom: 2.5rem;
   }
 }
 
