@@ -79,11 +79,14 @@
     }
 
     &:last-child {
-      border: 1px solid var(--text-primary);
       color: var(--text-primary);
+      background-color: var(--background-object);
+      border: 1px solid color-mix(in srgb, var(--special-cyan) 30%, transparent);
 
       &:hover {
-        background-color: var(--background-object);
+        background: color-mix(in srgb, var(--tertiary) 50%, transparent);
+        border: 1px solid
+          color-mix(in srgb, var(--special-cyan) 100%, transparent);
       }
     }
 
