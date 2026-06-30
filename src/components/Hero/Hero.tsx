@@ -4,7 +4,7 @@ import { LucideTerminal } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className={styles.hero}>
+    <section id="hero" className={styles.hero}>
       <div className={styles.content}>
         <span className={styles.subtitle}>npm install curriculum-vitae</span>
 

@@ -7,7 +7,11 @@
   inset: 0 0 auto 0;
   width: 100%;
   z-index: 50;
-  transition: all 0.35s ease;
+  transition:
+    background-color 0.35s ease,
+    backdrop-filter 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
   background: transparent;
 }
 
@@ -60,26 +64,21 @@
   position: fixed;
   top: 0;
   right: 0;
-
   height: 100vh;
   width: 70%;
-
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
   padding: 8rem 1rem;
-  background: rgba(5, 13, 38, 0.9);
-
+  background: rgba(5, 13, 38, 0.8);
   backdrop-filter: blur(10px);
-
   border-left: 1px solid var(--special-cyan);
   box-shadow: -10px 0 30px
     color-mix(in srgb, var(--special-cyan) 20%, transparent);
-
   transform: translateX(100%);
   opacity: 0;
-
   transition:
     transform 0.4s ease,
     opacity 0.4s ease;
@@ -94,7 +93,6 @@
   position: fixed;
   inset: 0;
   background: color-mix(in srgb, var(--special-black) 60%, transparent);
-
   backdrop-filter: blur(2px);
   z-index: 40;
 }
@@ -132,34 +130,46 @@
   color: var(--tertiary);
 }
 
-@media (min-width: bp.$tablet) {
-  .headerScrolled {
-    backdrop-filter: blur(12px);
-    background: rgba(13, 21, 22, 0.75);
+.headerScrolled {
+  backdrop-filter: blur(12px);
+  background: var(--background-object);
+  border-bottom: 1px solid color-mix(in srgb, var(--tertiary) 20%, transparent);
+  box-shadow: 0 0.5rem 2rem
+    color-mix(in srgb, var(--special-black) 25%, transparent);
 
-    border-bottom: 1px solid
-      color-mix(in srgb, var(--tertiary) 20%, transparent);
-
-    box-shadow: 0 0.5rem 2rem
-      color-mix(in srgb, var(--special-black) 25%, transparent);
-
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(
-        90deg,
-        transparent,
-        color-mix(in srgb, var(--special-cyan) 90%, transparent)
-      );
-      box-shadow: 0 0 0.625rem
-        color-mix(in srgb, var(--special-cyan) 50%, transparent);
-    }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(
+      45deg,
+      transparent,
+      color-mix(in srgb, var(--special-cyan) 80%, transparent),
+      transparent
+    );
+    box-shadow: 0 0 0.625rem
+      color-mix(in srgb, var(--special-cyan) 50%, transparent);
+    z-index: -1;
+    opacity: 1;
+    transition: opacity 0.35s ease;
   }
+}
 
+.headerOpen {
+  backdrop-filter: blur(0);
+  background: transparent;
+  border-bottom: 1px solid transparent;
+  box-shadow: none;
+
+  &::after {
+    opacity: 0;
+  }
+}
+
+@media (min-width: bp.$tablet) {
   .hamburger {
     display: none;
   }
@@ -170,8 +180,9 @@
     width: auto;
 
     flex-direction: row;
+
     padding: 0;
-    gap: 1;
+    gap: 1rem;
     opacity: 1;
 
     background: transparent;

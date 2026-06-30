@@ -10,11 +10,23 @@ type NavLinkProps = {
   src: StaticImageData;
   text: string;
   onClick?: () => void;
+  active?: boolean;
 };
 
-const NavLink = ({ type, href, alt, src, text, onClick }: NavLinkProps) => {
+const NavLink = ({
+  type,
+  href,
+  alt,
+  src,
+  text,
+  onClick,
+  active,
+}: NavLinkProps) => {
   return type === "link" ? (
-    <Link className={styles.navLink} href={href}>
+    <Link
+      href={href}
+      className={`${styles.navLink} ${active ? styles.active : ""}`}
+    >
       <Image className={styles.linkImage} src={src} alt={alt} />
       {text}
     </Link>

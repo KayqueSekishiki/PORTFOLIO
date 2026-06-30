@@ -10,6 +10,7 @@ import NavbarLanguageIcon from "@/assets/navbar/navbar-language-icon.svg";
 import NavLink from "../NavLink/NavLink";
 
 const Header = () => {
+  const [activeSection, setActiveSection] = useState("hero");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setOpen((prev) => !prev);
@@ -36,18 +37,61 @@ const Header = () => {
     };
   }, [open]);
 
+  useEffect(() => {
+    const sections = document.querySelectorAll("section[id]");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        let bestSection = "";
+        let maxRatio = 0;
+
+        entries.forEach((entry) => {
+          if (entry.intersectionRatio > maxRatio) {
+            maxRatio = entry.intersectionRatio;
+            bestSection = entry.target.id;
+          }
+        });
+
+        if (bestSection) {
+          setActiveSection(bestSection);
+        }
+      },
+      {
+        threshold: [0.25, 0.5, 0.75, 1],
+        rootMargin: "-120px 0px 0px 0px",
+      },
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <>
       <header
-        className={`${styles.header} ${scrolled ? styles.headerScrolled : ""}`}
+        className={`
+          ${styles.header}
+          ${scrolled ? styles.headerScrolled : ""}
+          ${open ? styles.headerOpen : ""}
+       `}
       >
         <div className={styles.container}>
-          <Link className={styles.linkIcon} href="/">
-            <Image className={styles.linkLogo} src={logo} alt="Logotipo KS" />
-          </Link>
-          <button className={styles.hamburger} onClick={toggleMenu}>
-            ☰
-          </button>
+          {!open && (
+            <>
+              <Link className={styles.linkIcon} href="/">
+                <Image
+                  className={styles.linkLogo}
+                  src={logo}
+                  alt="Logotipo KS"
+                />
+              </Link>
+
+              <button className={styles.hamburger} onClick={toggleMenu}>
+                ☰
+              </button>
+            </>
+          )}
           <nav className={`${styles.nav} ${open ? styles.openMobile : ""} `}>
             <NavLink
               type="link"
@@ -55,6 +99,7 @@ const Header = () => {
               src={NavbarAcademicIcon}
               alt="Ir para a sessão sobre mim"
               text="Sobre Mim"
+              active={activeSection === "about"}
             />
 
             <NavLink
@@ -63,6 +108,7 @@ const Header = () => {
               src={NavbarHomeIcon}
               alt="Ir par a sessão de carreira"
               text="Carreira"
+              active={activeSection === "career"}
             />
 
             <NavLink
@@ -71,6 +117,7 @@ const Header = () => {
               src={NavbarHomeIcon}
               alt="Ir para a sessão de projetos"
               text="Projetos"
+              active={activeSection === "projects"}
             />
 
             <NavLink
@@ -79,6 +126,7 @@ const Header = () => {
               src={NavbarHomeIcon}
               alt="Ir para a sessão de contato"
               text="Contato"
+              active={activeSection === "contact"}
             />
             <NavLink
               type="button"
