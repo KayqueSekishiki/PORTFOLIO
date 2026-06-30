@@ -1,0 +1,201 @@
+@use "../../styles/breakpoints" as bp;
+
+.item {
+  position: relative;
+}
+
+.empty {
+  display: none;
+}
+
+.content {
+  position: relative;
+  padding-left: 2rem;
+}
+
+.dot {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.05rem;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+.card {
+  padding: 1.5rem;
+  background: #151d1e;
+  border: 1px solid rgba(59, 73, 76, 0.2);
+  border-radius: 0.5rem;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+.card h3 {
+  margin-top: 0.4rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.card h4 {
+  margin-top: 0.35rem;
+  font-weight: 600;
+}
+
+.card p {
+  margin-top: 1rem;
+  line-height: 1.7;
+}
+
+.period {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.tag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.primaryTag {
+  background: color-mix(in srgb, var(--special-cyan) 15%, transparent);
+  color: var(--special-cyan);
+}
+
+.secondaryTag {
+  background: color-mix(in srgb, var(--special-violet) 15%, transparent);
+  color: var(--special-violet);
+}
+
+.tertiaryTag {
+  background: color-mix(in srgb, var(--special-yellow) 15%, transparent);
+  color: var(--special-yellow);
+}
+
+.quaternaryTag {
+  background: color-mix(in srgb, var(--card-variant-four) 15%, transparent);
+  color: var(--card-variant-four);
+}
+
+.quinaryTag {
+  background: color-mix(in srgb, #ff4fd8 15%, transparent);
+  color: #ff4fd8;
+}
+
+.primaryText {
+  color: var(--special-cyan);
+}
+
+.secondaryText {
+  color: var(--special-violet);
+}
+
+.tertiaryText {
+  color: var(--special-yellow);
+}
+
+.quaternaryText {
+  color: var(--card-variant-four);
+}
+
+.quinaryText {
+  color: #ff4fd8;
+}
+
+.primaryDot {
+  background: var(--special-cyan);
+}
+
+.secondaryDot {
+  background: var(--special-violet);
+}
+
+.tertiaryDot {
+  background: var(--special-yellow);
+}
+
+.quaternaryDot {
+  background: var(--card-variant-four);
+}
+
+.quinaryDot {
+  background: #ff4fd8;
+}
+
+.primaryCard:hover {
+  border-color: var(--special-cyan);
+}
+
+.secondaryCard:hover {
+  border-color: var(--special-violet);
+}
+
+.tertiaryCard:hover {
+  border-color: var(--special-yellow);
+}
+
+.quaternaryCard:hover {
+  border-color: var(--card-variant-four);
+}
+
+.quinaryCard:hover {
+  border-color: #ff4fd8;
+}
+
+@media (min-width: bp.$tablet) {
+  .item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .empty {
+    display: block;
+  }
+
+  .content {
+    padding-left: 40px;
+  }
+
+  .reverse {
+    .empty {
+      order: 2;
+    }
+
+    .content {
+      order: 1;
+      padding-left: 0;
+      padding-right: 40px;
+      text-align: right;
+    }
+
+    .dot {
+      left: auto;
+      right: -6px;
+    }
+
+    .tags {
+      justify-content: flex-end;
+    }
+  }
+
+  .dot {
+    left: -6px;
+  }
+}

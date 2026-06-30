@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import { PersonStanding } from "lucide-react";
 import styles from "./About.module.scss";
-import { technologies } from "@/app/data/technologies";
+import { technologies } from "@/data/technologies";
 import Link from "next/link";
 
 const About = () => {
