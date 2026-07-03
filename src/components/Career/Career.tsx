@@ -9,16 +9,16 @@ const Career = () => {
       <div className={styles.container}>
         <h2 className={styles.title}>
           <BriefcaseBusiness size={40} />
-          CARREIRA
+          Carreira
         </h2>
 
         <div className={styles.timeline}>
           <div className={styles.line} />
 
-          {careers.map((career, index) => (
+          {careers.map((item, index) => (
             <TimelineItem
-              key={career.period}
-              career={career}
+              key={item.period}
+              career={item}
               reverse={index % 2 !== 0}
             />
           ))}
