@@ -23,7 +23,7 @@ export default function Hero() {
         </p>
 
         <div className={styles.buttons}>
-          <PrimaryButton variant="link" href="#projects" text="Ver Projetos" />
+          <PrimaryButton variant="link" href="#projects" label="Ver Projetos" />
           <SecondaryButton href="#contact" label="Contato" />
         </div>
       </div>

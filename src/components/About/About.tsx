@@ -62,7 +62,7 @@ const About = () => {
             <div className={styles.buttonWrapper}>
               <PrimaryButton
                 variant="button"
-                text={showAll ? "Mostrar menos" : "Mostrar mais"}
+                label={showAll ? "Mostrar menos" : "Mostrar mais"}
                 onClick={() => setShowAll(!showAll)}
               />
             </div>

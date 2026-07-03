@@ -1,7 +1,6 @@
 import Image from "next/image";
 import RocketIcon from "../assets/rocket-icon.svg";
 import styles from "./home.module.scss";
-
 import SpecialButton from "@/components/SpecialButton/SpecialButton";
 
 export default function Home() {

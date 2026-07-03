@@ -4,13 +4,13 @@ type PrimaryButtonProps =
   | {
       variant: "link";
       href: string;
-      text: string;
+      label: string;
       onClick?: never;
     }
   | {
       variant: "button";
       href?: never;
-      text: string;
+      label: string;
       onClick: React.MouseEventHandler<HTMLButtonElement>;
     };
 
@@ -18,14 +18,14 @@ const PrimaryButton = (props: PrimaryButtonProps) => {
   if (props.variant === "link") {
     return (
       <a className={styles.cta} href={props.href} onClick={props.onClick}>
-        {props.text}
+        {props.label}
       </a>
     );
   }
 
   return (
     <button className={styles.cta} onClick={props.onClick}>
-      {props.text}
+      {props.label}
     </button>
   );
 };
