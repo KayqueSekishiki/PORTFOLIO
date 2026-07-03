@@ -1,9 +1,9 @@
 @mixin neon-gradient {
   background: linear-gradient(
     90deg,
-    var(--special-cyan),
-    var(--special-purple),
-    var(--special-pink)
+    var(--neon-cyan),
+    var(--neon-purple),
+    var(--neon-pink)
   );
 }
 

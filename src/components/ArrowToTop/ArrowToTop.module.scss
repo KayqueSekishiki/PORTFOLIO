@@ -10,17 +10,17 @@
   align-items: center;
   justify-content: center;
 
-  border: 0.2rem solid var(--special-cyan);
+  border: 0.2rem solid var(--neon-cyan);
   border-radius: 0.25rem;
 
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
   background: transparent;
 
   cursor: pointer;
   transition: 0.3s ease;
 
   &:hover {
-    box-shadow: 0 0 1rem var(--special-cyan);
+    box-shadow: 0 0 1rem var(--neon-cyan);
     transform: scale(1.05);
   }
 

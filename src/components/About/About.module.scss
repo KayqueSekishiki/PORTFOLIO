@@ -22,7 +22,7 @@
   position: relative;
   padding: 4px;
   overflow: hidden;
-  background: var(--background-object);
+  background: var(--bg-deep);
   border: 1px solid color-mix(in srgb, var(--tertiary) 40%, transparent);
   transition: 0.3s;
 
@@ -50,16 +50,16 @@
   top: 0;
   left: 0;
 
-  border-top: 2px solid var(--special-cyan);
-  border-left: 2px solid var(--special-cyan);
+  border-top: 2px solid var(--neon-cyan);
+  border-left: 2px solid var(--neon-cyan);
 }
 
 .cornerBottom {
   right: 0;
   bottom: 0;
 
-  border-right: 2px solid var(--special-cyan);
-  border-bottom: 2px solid var(--special-cyan);
+  border-right: 2px solid var(--neon-cyan);
+  border-bottom: 2px solid var(--neon-cyan);
 }
 
 .image {
@@ -83,19 +83,20 @@
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
   font-size: 2rem;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 .description {
-  color: var(--text-primary);
+  color: var(--text-core);
   line-height: 1.8;
 }
 
 .highlight {
   display: block;
-  color: var(--text-secondary);
+  color: var(--text-dim);
 }
 
 .skills {
@@ -109,9 +110,9 @@
   align-items: center;
   padding: 0.75rem 1rem;
   gap: 0.5rem;
-  border: 1px solid color-mix(in srgb, var(--special-cyan) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--neon-cyan) 30%, transparent);
   border-radius: 0.5rem;
-  background: var(--background-object);
+  background: var(--bg-deep);
   transition: 0.25s;
 
   svg {
@@ -123,8 +124,8 @@
   }
 
   &:hover {
-    border-color: color-mix(in srgb, var(--special-cyan) 100%, transparent);
-    background: color-mix(in srgb, var(--tertiary) 50%, transparent);
+    border-color: color-mix(in srgb, var(--neon-cyan) 100%, transparent);
+    background: color-mix(in srgb, var(--text-dim) 50%, transparent);
 
     svg {
       transform: scale(1.25);
@@ -146,19 +147,17 @@
   text-transform: uppercase;
   transition: 0.3s;
 
-  background: var(--special-cyan);
-  color: var(--special-black);
+  background: var(--neon-cyan);
+  color: var(--bg-deep);
   cursor: pointer;
 
   &:hover {
-    box-shadow: 0 0 1rem
-      color-mix(in srgb, var(--special-cyan) 50%, transparent);
+    box-shadow: 0 0 1rem color-mix(in srgb, var(--neon-cyan) 50%, transparent);
     transform: scale(1.05);
   }
 
   &:active {
-    box-shadow: 0 0 0.5rem
-      color-mix(in srgb, var(--special-cyan) 50%, transparent);
+    box-shadow: 0 0 0.5rem color-mix(in srgb, var(--neon-cyan) 50%, transparent);
     transform: scale(0.98);
   }
 }

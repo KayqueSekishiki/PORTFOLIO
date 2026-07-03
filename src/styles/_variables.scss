@@ -1,35 +1,17 @@
 :root {
-  --background: #050d26;
-  --background-object: #080f11;
-  --text-primary: #d5f3ff;
-  --text-secondary: #05f2db40;
-  --tertiary: #3b494c;
-
-  --special-cyan: #00ffff;
-  --special-purple: #bb44ff;
-  --special-pink: #ff00ff;
-  --special-black: #000000;
-  --special-yellow: #f59e0b;
-  --special-violet: #d0bcff;
-
-  --card-variant-one: #08a6bb;
-  --card-variant-two: #f76844;
-  --card-variant-three: #c71c85;
-  --card-variant-four: #22c55e;
-}
-
-:root {
   --bg-deep: #02040a;
   --bg-core: #050d26;
   --surface: #0b1224;
   --surface-glass: rgba(10, 18, 40, 0.6);
-  --surface-border: rgba(0, 255, 255, 0.08);
+  --surface-border: rgba(0, 255, 255, 0.2);
 
   --neon-cyan: #00ffff;
   --neon-purple: #a855ff;
   --neon-pink: #ff2bd6;
   --neon-lime: #39ff14;
   --neon-amber: #ffcc00;
+  --neon-orange: #f76844;
+  --neon-violet: #d0bcff;
 
   --glow-cyan: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.4);
 

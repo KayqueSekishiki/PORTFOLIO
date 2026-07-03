@@ -8,7 +8,7 @@
   align-items: center;
 
   font-family: var(--font-geist-sans);
-  background-color: var(--background);
+  background-color: var(--bg-core);
 }
 
 .main {
@@ -34,11 +34,11 @@
   }
 
   .lineLeft {
-    background: linear-gradient(to right, transparent, var(--special-purple));
+    background: linear-gradient(to right, transparent, var(--neon-purple));
   }
 
   .lineRight {
-    background: linear-gradient(to left, transparent, var(--special-purple));
+    background: linear-gradient(to left, transparent, var(--neon-purple));
   }
 
   .rocketIcon {
@@ -64,7 +64,7 @@
 }
 
 .title {
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
   letter-spacing: 0.2rem;
   font-weight: 400;
 }

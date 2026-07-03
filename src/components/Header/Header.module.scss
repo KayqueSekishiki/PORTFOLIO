@@ -33,7 +33,7 @@
 .linkLogo {
   width: 3rem;
   height: 3rem;
-  border: 0.2rem solid var(--special-cyan);
+  border: 0.2rem solid var(--neon-cyan);
   border-radius: 0.25rem;
   transition: transform 0.3s;
 
@@ -51,12 +51,12 @@
   background: transparent;
   border: none;
   cursor: pointer;
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
   transition: 0.3s ease;
 
   &:hover {
     transform: scale(1.1);
-    text-shadow: 0 0 10px var(--special-cyan);
+    text-shadow: 0 0 10px var(--neon-cyan);
   }
 }
 
@@ -72,11 +72,10 @@
   align-items: center;
   justify-content: space-around;
   padding: 8rem 1rem;
-  background: rgba(5, 13, 38, 0.8);
+  background: var(--bg-core);
   backdrop-filter: blur(10px);
-  border-left: 1px solid var(--special-cyan);
-  box-shadow: -10px 0 30px
-    color-mix(in srgb, var(--special-cyan) 20%, transparent);
+  border-left: 1px solid var(--neon-cyan);
+  box-shadow: -10px 0 30px color-mix(in srgb, var(--neon-cyan) 20%, transparent);
   transform: translateX(100%);
   opacity: 0;
   transition:
@@ -92,7 +91,7 @@
 .overlayMobile {
   position: fixed;
   inset: 0;
-  background: color-mix(in srgb, var(--special-black) 60%, transparent);
+  background: color-mix(in srgb, var(--bg-deep) 80%, transparent);
   backdrop-filter: blur(2px);
   z-index: 40;
 }
@@ -101,41 +100,40 @@
   display: none;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: 1rem;
-  border: 1px solid color-mix(in srgb, var(--tertiary) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--text-dim) 30%, transparent);
   border-radius: 0.75rem;
-  background: var(--background-object);
+  background: var(--bg-deep);
 }
 
 .buttonLanguageSelector {
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--text-primary);
+  font-weight: bold;
+  color: var(--text-core);
   background: none;
   border: none;
   cursor: pointer;
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--special-cyan);
+    color: var(--neon-cyan);
   }
 }
 
 .active {
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
 }
 
 .separator {
-  color: var(--tertiary);
+  color: var(--text-dim);
 }
 
 .headerScrolled {
   backdrop-filter: blur(12px);
-  background: var(--background-object);
-  border-bottom: 1px solid color-mix(in srgb, var(--tertiary) 20%, transparent);
-  box-shadow: 0 0.5rem 2rem
-    color-mix(in srgb, var(--special-black) 25%, transparent);
+  background: var(--surface-glass);
+  border-bottom: 1px solid
+    color-mix(in srgb, var(--surface-border) 100%, transparent);
+  box-shadow: 0 0.5rem 2rem color-mix(in srgb, var(--bg-deep) 25%, transparent);
 
   &::after {
     content: "";
@@ -147,11 +145,11 @@
     background: linear-gradient(
       45deg,
       transparent,
-      color-mix(in srgb, var(--special-cyan) 80%, transparent),
+      color-mix(in srgb, var(--neon-cyan) 80%, transparent),
       transparent
     );
     box-shadow: 0 0 0.625rem
-      color-mix(in srgb, var(--special-cyan) 50%, transparent);
+      color-mix(in srgb, var(--neon-cyan) 50%, transparent);
     z-index: -1;
     opacity: 1;
     transition: opacity 0.35s ease;

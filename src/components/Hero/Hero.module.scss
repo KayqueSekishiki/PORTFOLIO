@@ -17,7 +17,7 @@
   gap: 1.25rem;
 
   .subtitle {
-    color: var(--special-cyan);
+    color: var(--neon-cyan);
     font-size: 0.75rem;
     letter-spacing: 0.2rem;
   }
@@ -32,7 +32,7 @@
   }
 
   span {
-    color: var(--text-primary);
+    color: var(--text-core);
   }
 
   small {
@@ -41,9 +41,9 @@
     strong {
       background: linear-gradient(
         90deg,
-        var(--special-cyan),
-        var(--special-purple),
-        var(--special-pink)
+        var(--neon-cyan),
+        var(--neon-purple),
+        var(--neon-pink)
       );
 
       background-clip: text;
@@ -69,24 +69,23 @@
     transition: 0.3s;
 
     &:first-child {
-      background: var(--special-cyan);
-      color: var(--special-black);
+      background: var(--neon-cyan);
+      color: var(--bg-deep);
 
       &:hover {
         box-shadow: 0 0 1rem
-          color-mix(in srgb, var(--special-cyan) 50%, transparent);
+          color-mix(in srgb, var(--neon-cyan) 50%, transparent);
       }
     }
 
     &:last-child {
-      color: var(--text-primary);
-      background-color: var(--background-object);
-      border: 1px solid color-mix(in srgb, var(--special-cyan) 30%, transparent);
+      color: var(--text-core);
+      background-color: var(--bg-deep);
+      border: 1px solid color-mix(in srgb, var(--neon-cyan) 30%, transparent);
 
       &:hover {
-        background: color-mix(in srgb, var(--tertiary) 50%, transparent);
-        border: 1px solid
-          color-mix(in srgb, var(--special-cyan) 100%, transparent);
+        background: color-mix(in srgb, var(--text-dim) 20%, transparent);
+        border: 1px solid color-mix(in srgb, var(--neon-cyan) 100%, transparent);
       }
     }
 
@@ -116,19 +115,19 @@
 .square1 {
   inset: 0;
   animation: rotate 20s linear infinite;
-  border: 1px solid color-mix(in srgb, #f3bf26 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--neon-amber) 30%, transparent);
 }
 
 .square2 {
   inset: 60px;
   animation: rotateReverse 15s linear infinite;
-  border: 1px solid color-mix(in srgb, #d0bcff 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--neon-pink) 30%, transparent);
 }
 
 .square3 {
   inset: 120px;
   animation: pulse 4s ease infinite;
-  border: 1px solid color-mix(in srgb, var(--special-cyan) 30%, transparent);
+  border: 1px solid color-mix(in srgb, var(--neon-cyan) 30%, transparent);
 }
 
 .icon {
@@ -140,7 +139,7 @@
 
   font-size: 8rem;
   font-weight: 900;
-  color: var(--special-cyan);
+  color: var(--neon-cyan);
   opacity: 0.2;
 
   :first-child {
@@ -148,9 +147,9 @@
     top: 180;
     width: 6rem;
     height: 4rem;
-    border: 0.75rem solid var(--tertiary);
+    border: 0.75rem solid var(--surface-border);
     border-radius: 1rem;
-    box-shadow: 0 -1rem 0 0 var(--tertiary);
+    box-shadow: 0 -1rem 0 0 var(--surface-border);
   }
 }
 
@@ -167,14 +166,14 @@
   span {
     font-size: 0.75rem;
     letter-spacing: 0.1rem;
-    color: var(--text-secondary);
+    color: var(--surface-border);
   }
 }
 
 .scrollLine {
   width: 1px;
   height: 3rem;
-  background: linear-gradient(to bottom, var(--special-cyan), transparent);
+  background: linear-gradient(to bottom, var(--neon-cyan), transparent);
   animation: bounce 1.8s infinite;
 }
 
