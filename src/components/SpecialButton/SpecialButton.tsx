@@ -1,12 +1,12 @@
 import Image from "next/image";
-import styles from "./ButtonPrimary.module.scss";
+import styles from "./SpecialButton.module.scss";
 import ArrowRightIcon from "@/assets/arrow-right-icon.svg";
 
-type ButtonPrimaryProps = {
+type SpecialButtonProps = {
   href: string;
 };
 
-const ButtonPrimary = ({ href }: ButtonPrimaryProps) => {
+const SpecialButton = ({ href }: SpecialButtonProps) => {
   return (
     <a className={`${styles.cta}`} href={href} rel="noopener noreferrer">
       Acessar
@@ -19,4 +19,4 @@ const ButtonPrimary = ({ href }: ButtonPrimaryProps) => {
   );
 };
 
-export default ButtonPrimary;
+export default SpecialButton;
