@@ -4,8 +4,8 @@ import Image from "next/image";
 import { PersonStanding } from "lucide-react";
 import styles from "./About.module.scss";
 import { technologies } from "@/data/technologies";
-import Link from "next/link";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
 const About = () => {
   const [showAll, setShowAll] = useState(false);
@@ -48,12 +48,13 @@ const About = () => {
           </p>
 
           <div className={styles.skills}>
-            {visibleTechnologies.map(({ icon: Icon, label, href }) => (
-              <Link className={styles.skill} key={label} href={href}>
-                <Icon size={18} />
-
-                <span>{label}</span>
-              </Link>
+            {visibleTechnologies.map(({ icon, label, href }) => (
+              <SecondaryButton
+                key={label}
+                href={href}
+                label={label}
+                icon={icon}
+              />
             ))}
           </div>
 

@@ -1,7 +1,7 @@
-import Link from "next/link";
 import styles from "./Hero.module.scss";
 import { LucideTerminal } from "lucide-react";
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
+import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
 export default function Hero() {
   return (
@@ -24,7 +24,7 @@ export default function Hero() {
 
         <div className={styles.buttons}>
           <PrimaryButton variant="link" href="#projects" text="Ver Projetos" />
-          <Link href="#contact">Contato</Link>
+          <SecondaryButton href="#contact" label="Contato" />
         </div>
       </div>
 
