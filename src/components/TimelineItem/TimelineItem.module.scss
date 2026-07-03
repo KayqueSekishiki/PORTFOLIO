@@ -2,6 +2,9 @@
 
 .item {
   position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  --accent: var(--neon-cyan);
 }
 
 .empty {
@@ -15,46 +18,54 @@
 
 .dot {
   position: absolute;
-  top: 0.4rem;
-  left: 0.05rem;
-  width: 0.8rem;
-  height: 0.8rem;
-  border-radius: 50%;
+  top: 0.5rem;
+  left: 0.25rem;
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: 999px;
+  background: var(--accent);
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 80%, transparent);
 }
 
 .card {
   padding: 1.5rem;
-  background: #151d1e;
-  border: 1px solid rgba(59, 73, 76, 0.2);
-  border-radius: 0.5rem;
-  transition: 0.3s;
+  background: var(--surface);
+  border: 1px solid var(--surface-border);
+  border-radius: 0.75rem;
+  transition: 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-6px);
+  border-color: var(--accent);
+  box-shadow: 0 0 18px color-mix(in srgb, var(--accent) 30%, transparent);
 }
 
-.card h3 {
+.title {
   margin-top: 0.4rem;
   font-size: 1.25rem;
   font-weight: 700;
+  color: var(--text-core);
 }
 
-.card h4 {
-  margin-top: 0.35rem;
+.company {
+  margin-top: 0.25rem;
   font-weight: 600;
+  color: var(--accent);
 }
 
-.card p {
+.description {
   margin-top: 1rem;
   line-height: 1.7;
+  color: var(--text-dim);
 }
 
 .period {
-  font-family: "JetBrains Mono", monospace;
+  font-family: monospace;
   font-size: 0.75rem;
-  text-transform: uppercase;
   letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
 .tags {
@@ -66,103 +77,19 @@
 
 .tag {
   padding: 0.25rem 0.5rem;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-}
-
-.primaryTag {
-  background: color-mix(in srgb, var(--special-cyan) 15%, transparent);
-  color: var(--special-cyan);
-}
-
-.secondaryTag {
-  background: color-mix(in srgb, var(--special-violet) 15%, transparent);
-  color: var(--special-violet);
-}
-
-.tertiaryTag {
-  background: color-mix(in srgb, var(--special-yellow) 15%, transparent);
-  color: var(--special-yellow);
-}
-
-.quaternaryTag {
-  background: color-mix(in srgb, var(--card-variant-four) 15%, transparent);
-  color: var(--card-variant-four);
-}
-
-.quinaryTag {
-  background: color-mix(in srgb, #ff4fd8 15%, transparent);
-  color: #ff4fd8;
-}
-
-.primaryText {
-  color: var(--special-cyan);
-}
-
-.secondaryText {
-  color: var(--special-violet);
-}
-
-.tertiaryText {
-  color: var(--special-yellow);
-}
-
-.quaternaryText {
-  color: var(--card-variant-four);
-}
-
-.quinaryText {
-  color: #ff4fd8;
-}
-
-.primaryDot {
-  background: var(--special-cyan);
-}
-
-.secondaryDot {
-  background: var(--special-violet);
-}
-
-.tertiaryDot {
-  background: var(--special-yellow);
-}
-
-.quaternaryDot {
-  background: var(--card-variant-four);
-}
-
-.quinaryDot {
-  background: #ff4fd8;
-}
-
-.primaryCard:hover {
-  border-color: var(--special-cyan);
-}
-
-.secondaryCard:hover {
-  border-color: var(--special-violet);
-}
-
-.tertiaryCard:hover {
-  border-color: var(--special-yellow);
-}
-
-.quaternaryCard:hover {
-  border-color: var(--card-variant-four);
-}
-
-.quinaryCard:hover {
-  border-color: #ff4fd8;
+  border: 1px solid var(--surface-border);
+  color: var(--accent);
 }
 
 @media (min-width: bp.$tablet) {
   .item {
-    display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 2.5rem;
   }
 
   .empty {
@@ -170,32 +97,22 @@
   }
 
   .content {
-    padding-left: 40px;
+    padding-left: 2.5rem;
   }
 
-  .reverse {
-    .empty {
-      order: 2;
-    }
-
-    .content {
-      order: 1;
-      padding-left: 0;
-      padding-right: 40px;
-      text-align: right;
-    }
-
-    .dot {
-      left: auto;
-      right: -6px;
-    }
-
-    .tags {
-      justify-content: flex-end;
-    }
+  .reverse .content {
+    order: -1;
+    padding-left: 0;
+    padding-right: 2.5rem;
+    text-align: right;
   }
 
-  .dot {
-    left: -6px;
+  .reverse .tags {
+    justify-content: flex-end;
+  }
+
+  .reverse .dot {
+    left: auto;
+    right: -0.25rem;
   }
 }

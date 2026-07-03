@@ -18,27 +18,31 @@
   --card-variant-four: #22c55e;
 }
 
-// :root {
-//   /* Backgrounds */
-//   --bg: #050d26;
-//   --surface: #080f11;
-//   --surface-low: #151d1e;
+:root {
+  --bg-deep: #02040a;
+  --bg-core: #050d26;
+  --surface: #0b1224;
+  --surface-glass: rgba(10, 18, 40, 0.6);
+  --surface-border: rgba(0, 255, 255, 0.08);
 
-//   /* Typography */
-//   --text: #d5f3ff;
-//   --text-muted: #bac9cc;
+  --neon-cyan: #00ffff;
+  --neon-purple: #a855ff;
+  --neon-pink: #ff2bd6;
+  --neon-lime: #39ff14;
+  --neon-amber: #ffcc00;
 
-//   /* Borders */
-//   --border: #3b494c;
+  --glow-cyan: 0 0 12px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.4);
 
-//   /* Brand */
-//   --primary: #00ffff;
-//   --secondary: #bb44ff;
-//   --tertiary: #ff00ff;
+  --glow-purple:
+    0 0 12px rgba(168, 85, 255, 0.8), 0 0 30px rgba(168, 85, 255, 0.4);
 
-//   /* Status */
-//   --success: #13a53f;
-//   --warning: #f76844;
-//   --danger: #c71c85;
-//   --info: #08a6bb;
-// }
+  --glow-pink:
+    0 0 12px rgba(255, 43, 214, 0.8), 0 0 30px rgba(255, 43, 214, 0.4);
+
+  --text-core: #d6f7ff;
+  --text-dim: rgba(214, 247, 255, 0.6);
+  --text-glitch: rgba(0, 255, 255, 0.8);
+
+  --border-neon: rgba(0, 255, 255, 0.25);
+  --border-glow: rgba(255, 43, 214, 0.2);
+}

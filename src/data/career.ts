@@ -7,7 +7,7 @@ export const careers: Career[] = [
     company: "Autônomo",
     description:
       "Atuação como desenvolvedor freelancer em projetos de pequeno e médio porte, desenvolvendo aplicações web, mobile, jogos eletrônicos e soluções personalizadas para clientes e projetos independentes.",
-    color: "primary",
+    color: "cyan",
     technologies: [
       "React",
       "React Native",
@@ -24,7 +24,7 @@ export const careers: Career[] = [
     company: "MADCAT House",
     description:
       "Fui cofundador de um estúdio independente de jogos, desenvolvendo sistemas, mecânicas e funcionalidades com GDScript, Godot Engine e Programação Orientada a Objetos (POO), atuando na prototipação, implementação, manutenção e otimização do código.",
-    color: "secondary",
+    color: "purple",
     technologies: ["C#", "GDScript", "Godot Engine", "Kanban"],
   },
   {
@@ -33,7 +33,7 @@ export const careers: Career[] = [
     company: "Digital Innovation One",
     description:
       "Voluntário na DIO, atuando na pesquisa e produção de artigos sobre tecnologia para a comunidade estudantil, promovendo o compartilhamento de conhecimento, a aprendizagem colaborativa e o desenvolvimento de futuros líderes e embaixadores da plataforma.",
-    color: "tertiary",
+    color: "pink",
     technologies: ["Word", "LLM", "Scrum"],
   },
   {
@@ -42,7 +42,7 @@ export const careers: Career[] = [
     company: "Animuz Game Experience LTDA",
     description:
       "Desenvolvi funcionalidades para a interface do usuário (UI) e mecânicas de um jogo educacional, realizando também a refatoração da base de código para otimizar o desempenho e garantir a aplicação de boas práticas de desenvolvimento.",
-    color: "quaternary",
+    color: "lime",
     technologies: ["C#", "MongoDB", "Aseprite", "Unity Engine"],
   },
 ];

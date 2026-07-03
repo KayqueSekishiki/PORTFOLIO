@@ -1,9 +1,4 @@
-export type CareerColor =
-  | "primary"
-  | "secondary"
-  | "tertiary"
-  | "quaternary"
-  | "quinary";
+export type CareerColor = "cyan" | "purple" | "pink" | "lime" | "amber";
 
 export type Career = {
   period: string;
