@@ -139,29 +139,6 @@
   justify-content: center;
 }
 
-.button {
-  padding: 1rem 1.5rem;
-  border-radius: 0.5rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-  text-transform: uppercase;
-  transition: 0.3s;
-
-  background: var(--neon-cyan);
-  color: var(--bg-deep);
-  cursor: pointer;
-
-  &:hover {
-    box-shadow: 0 0 1rem color-mix(in srgb, var(--neon-cyan) 50%, transparent);
-    transform: scale(1.05);
-  }
-
-  &:active {
-    box-shadow: 0 0 0.5rem color-mix(in srgb, var(--neon-cyan) 50%, transparent);
-    transform: scale(0.98);
-  }
-}
-
 @media (min-width: bp.$tablet) {
   .container {
     grid-template-columns: 1fr 1fr;

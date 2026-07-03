@@ -68,16 +68,6 @@
     text-transform: uppercase;
     transition: 0.3s;
 
-    &:first-child {
-      background: var(--neon-cyan);
-      color: var(--bg-deep);
-
-      &:hover {
-        box-shadow: 0 0 1rem
-          color-mix(in srgb, var(--neon-cyan) 50%, transparent);
-      }
-    }
-
     &:last-child {
       color: var(--text-core);
       background-color: var(--bg-deep);

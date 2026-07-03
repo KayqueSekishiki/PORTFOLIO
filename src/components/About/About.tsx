@@ -5,6 +5,7 @@ import { PersonStanding } from "lucide-react";
 import styles from "./About.module.scss";
 import { technologies } from "@/data/technologies";
 import Link from "next/link";
+import PrimaryButton from "../PrimaryButton/PrimaryButton";
 
 const About = () => {
   const [showAll, setShowAll] = useState(false);
@@ -58,12 +59,11 @@ const About = () => {
 
           {technologies.length > 8 && (
             <div className={styles.buttonWrapper}>
-              <button
-                className={styles.button}
+              <PrimaryButton
+                variant="button"
+                text={showAll ? "Mostrar menos" : "Mostrar mais"}
                 onClick={() => setShowAll(!showAll)}
-              >
-                {showAll ? "Mostrar menos" : "Mostrar mais"}
-              </button>
+              />
             </div>
           )}
         </div>
