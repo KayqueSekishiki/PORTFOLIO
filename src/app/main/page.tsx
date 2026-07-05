@@ -12,7 +12,7 @@ export default function Main() {
       <Hero />
       <About />
       <Career />
-      <ArrowToTop />
+      <ArrowToTop variant="lucide" />
       <main className={styles.main}></main>
     </div>
   );
