@@ -20,7 +20,9 @@ import {
   TbBrandVite,
 } from "react-icons/tb";
 
-const imageURLTest = "";
+import emBreve from "@/assets/em-breve.jpg";
+
+const imageURLTest = emBreve;
 
 export const projects: Project[] = [
   {
@@ -50,6 +52,17 @@ export const projects: Project[] = [
     category: "games",
     image: imageURLTest,
     technologies: [TbBrandUnity, SiGit],
+    github: "#",
+    demo: "#",
+  },
+
+  {
+    id: 4,
+    title: "Em breve",
+    description: "Ainda não temos nada por aqui.",
+    category: "others",
+    image: imageURLTest,
+    technologies: [SiPostgresql, SiGit],
     github: "#",
     demo: "#",
   },
