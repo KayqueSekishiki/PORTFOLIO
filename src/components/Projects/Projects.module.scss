@@ -22,11 +22,13 @@
   align-items: center;
   gap: 0.75rem;
   color: var(--neon-cyan);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
 
   svg {
     color: var(--neon-cyan);
+    flex-shrink: 0;
+    height: 2rem;
   }
 }
 
@@ -57,6 +59,14 @@
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
+  }
+
+  .title {
+    font-size: 2rem;
+
+    svg {
+      height: 2.5rem;
+    }
   }
 
   .grid {
