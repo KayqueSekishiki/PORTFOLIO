@@ -1,0 +1,132 @@
+@use "../../styles/breakpoints" as bp;
+
+.footer {
+  width: 100%;
+  margin-top: 6rem;
+  border-top: 0.1rem solid var(--surface-border);
+  border-bottom: 0.1rem solid var(--surface-border);
+  background: color-mix(in srgb, var(--surface) 85%, transparent);
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.navigation {
+  display: none;
+  flex-flow: row wrap;
+  justify-content: center;
+  gap: 1rem 1.5rem;
+
+  a {
+    color: var(--text-dim);
+    text-decoration: none;
+    transition:
+      color 0.25s ease,
+      transform 0.25s ease;
+
+    &:hover {
+      color: var(--neon-cyan);
+      transform: scale(1.03);
+    }
+  }
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  gap: 1rem;
+
+  a {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.1rem solid var(--surface-border);
+    border-radius: 0.5rem;
+    color: var(--text-core);
+    background: var(--surface);
+
+    transition:
+      transform 0.25s ease,
+      color 0.25s ease,
+      border-color 0.25s ease,
+      box-shadow 0.25s ease;
+
+    &:hover {
+      color: var(--neon-cyan);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 1rem color-mix(in srgb, var(--neon-cyan) 30%, transparent);
+      transform: scale(1.03);
+    }
+  }
+}
+
+.bottom {
+  width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-dim);
+}
+
+.madeWith {
+  display: none;
+  align-items: center;
+  gap: 0.4rem;
+
+  svg {
+    color: var(--neon-cyan);
+    fill: currentColor;
+  }
+}
+
+.active {
+  display: flex;
+}
+
+@media (min-width: bp.$tablet) {
+  .container {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .active {
+    display: none;
+  }
+}
+
+@media (min-width: bp.$desktop) {
+  .navigation {
+    flex-direction: row;
+  }
+}
