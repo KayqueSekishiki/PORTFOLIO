@@ -1,0 +1,125 @@
+@use "../../../styles/breakpoints" as bp;
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 0.1rem solid var(--surface-border);
+  border-radius: 1rem;
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-0.35rem);
+    border-color: var(--accent-color);
+    box-shadow:
+      0 0 0.75rem color-mix(in srgb, var(--accent-color) 45%, transparent),
+      0 0 2rem color-mix(in srgb, var(--accent-color) 20%, transparent);
+
+    .image {
+      transform: scale(1.08);
+    }
+
+    .icon {
+      color: var(--accent-color);
+      transform: translateY(-0.15rem);
+    }
+
+    .link {
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+  }
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.image {
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--accent-color) 10%, var(--bg-deep)),
+    transparent
+  );
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 1.5rem;
+}
+
+.title {
+  color: var(--text-core);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.description {
+  margin-top: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.technologies {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.icon {
+  color: var(--accent-color);
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-core);
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--accent-color);
+  }
+}
+
+@media (min-width: bp.$desktop) {
+  .footer {
+    flex-direction: row;
+  }
+}

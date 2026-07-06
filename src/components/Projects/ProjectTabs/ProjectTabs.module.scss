@@ -1,0 +1,130 @@
+@use "../../../styles/animations";
+@use "../../../styles/breakpoints" as bp;
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.scroll {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+
+  color: var(--surface-border);
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+
+  user-select: none;
+}
+
+.scrollLineLeft {
+  flex: 1;
+  height: 0.1rem;
+  background: linear-gradient(to left, var(--surface-border), transparent);
+  animation: bounceToLeft 1.5s infinite;
+}
+
+.scrollLineRight {
+  flex: 1;
+  height: 0.1rem;
+  background: linear-gradient(to right, var(--surface-border), transparent);
+  animation: bounceToRight 1.5s infinite;
+}
+
+.tabs {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.35rem;
+  background: var(--surface);
+  border: 0.1rem solid var(--surface-border);
+  border-radius: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.tab {
+  --tab-color: var(--neon-cyan);
+
+  position: relative;
+  z-index: 2;
+  flex: 0 0 auto;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: 999rem;
+  background: transparent;
+  color: var(--text-dim);
+  font-size: 0.875rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+
+  &:hover {
+    color: var(--tab-color);
+  }
+
+  &:active {
+    transform: scale(0.97);
+  }
+}
+
+.all {
+  --tab-color: var(--neon-cyan);
+}
+
+.web {
+  --tab-color: var(--neon-purple);
+}
+
+.mobile {
+  --tab-color: var(--neon-amber);
+}
+
+.games {
+  --tab-color: var(--neon-lime);
+}
+
+.others {
+  --tab-color: var(--neon-orange);
+}
+
+.active {
+  color: var(--tab-color);
+}
+
+.indicator {
+  position: absolute;
+  bottom: 0.35rem;
+  left: 0;
+  height: 0.2rem;
+  border-radius: 999rem;
+  pointer-events: none;
+  transition:
+    left 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    width 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+    background-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+@media (min-width: bp.$tablet) {
+  .scroll {
+    display: none;
+  }
+}

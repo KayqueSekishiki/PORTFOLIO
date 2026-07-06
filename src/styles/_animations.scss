@@ -72,3 +72,15 @@
     transform: translateY(12px);
   }
 }
+
+@keyframes bounceToLeft {
+  50% {
+    transform: translateX(-12px);
+  }
+}
+
+@keyframes bounceToRight {
+  50% {
+    transform: translateX(12px);
+  }
+}
