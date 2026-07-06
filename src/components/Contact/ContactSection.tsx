@@ -106,7 +106,11 @@ const ContactSection = () => {
           </div>
 
           <div className={styles.cards}>
-            <Link className={styles.card} href="mailto:hello.kayque@gmail.com">
+            <Link
+              className={styles.card}
+              href="mailto:hello.kayque@gmail.com"
+              target="_blank"
+            >
               <div className={styles.iconContainer}>
                 <Mail size={28} />
               </div>
@@ -119,6 +123,7 @@ const ContactSection = () => {
             <Link
               className={styles.card}
               href="https://linkedin.com/in/kayque-sekishiki"
+              target="_blank"
             >
               <div className={styles.iconContainer}>
                 <TbBrandLinkedinFilled size={28} />
@@ -132,6 +137,7 @@ const ContactSection = () => {
             <Link
               className={styles.card}
               href="https://github.com/kayquesekishiki"
+              target="_blank"
             >
               <div className={styles.iconContainer}>
                 <FaGithub size={28} />
@@ -142,7 +148,11 @@ const ContactSection = () => {
               </div>
             </Link>
 
-            <Link className={styles.card} href="https://wa.me/5511962515162">
+            <Link
+              className={styles.card}
+              href="https://wa.me/5511962515162"
+              target="_blank"
+            >
               <div className={styles.iconContainer}>
                 <FaWhatsapp size={28} />
               </div>
