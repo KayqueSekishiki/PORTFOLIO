@@ -2,18 +2,18 @@
 
 .navLink,
 .navButton {
-  width: 6.5rem;
-  height: 6.5rem;
+  width: 5.5rem;
+  height: 5.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
-  border: 0.25rem solid var(--neon-cyan);
+  gap: 0.75rem;
+  border: 0.125rem solid var(--text-core);
   border-radius: 1rem;
   background: none;
   color: var(--text-core);
-  font-size: 0.75rem;
+  font-size: 0.6125rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   text-align: center;
@@ -26,14 +26,13 @@
 
   &:hover {
     color: var(--neon-cyan);
-    border-color: var(--neon-purple);
+    border-color: var(--neon-cyan);
     text-shadow: 0 0 10px var(--neon-cyan);
+    transform: scale(1.05);
 
-    .linkImage {
+    .icon {
       transform: scale(1.1);
     }
-
-    transform: scale(1.05);
   }
 
   &:active {
@@ -41,22 +40,23 @@
   }
 }
 
-.linkImage {
-  width: 2.5rem;
-  height: 2.5rem;
+.icon {
+  width: 2rem;
+  height: 2rem;
   transition: transform 0.3s ease;
   flex-shrink: 0;
 }
 
 .navButton {
-  width: 14rem;
+  width: 100%;
 }
 
 .active {
   color: var(--neon-cyan);
   text-shadow: 0 0 10px var(--neon-cyan);
+  border-color: var(--neon-cyan);
 
-  .linkImage {
+  .icon {
     transform: scale(1.1);
   }
 }
@@ -73,7 +73,7 @@
     text-transform: lowercase;
   }
 
-  .linkImage {
+  .icon {
     display: none;
   }
 

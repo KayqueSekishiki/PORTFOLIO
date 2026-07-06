@@ -4,9 +4,13 @@ import logo from "../../assets/ks.png";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
-import NavbarHomeIcon from "@/assets/navbar/navbar-home-icon.svg";
-import NavbarAcademicIcon from "@/assets/navbar/navbar-academic-icon.svg";
-import NavbarLanguageIcon from "@/assets/navbar/navbar-language-icon.svg";
+import {
+  PersonStanding,
+  BriefcaseBusiness,
+  FolderKanban,
+  Mail,
+  Languages,
+} from "lucide-react";
 import NavLink from "../NavLink/NavLink";
 
 const Header = () => {
@@ -38,33 +42,31 @@ const Header = () => {
   }, [open]);
 
   useEffect(() => {
-    const sections = document.querySelectorAll("section[id]");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        let bestSection = "";
-        let maxRatio = 0;
-
-        entries.forEach((entry) => {
-          if (entry.intersectionRatio > maxRatio) {
-            maxRatio = entry.intersectionRatio;
-            bestSection = entry.target.id;
-          }
-        });
-
-        if (bestSection) {
-          setActiveSection(bestSection);
-        }
-      },
-      {
-        threshold: [0.25, 0.5, 0.75, 1],
-        rootMargin: "-120px 0px 0px 0px",
-      },
+    const sections = Array.from(
+      document.querySelectorAll<HTMLElement>("section[id]"),
     );
 
-    sections.forEach((section) => observer.observe(section));
+    const handleScroll = () => {
+      const offset = 140;
+      let current = sections[0]?.id;
 
-    return () => observer.disconnect();
+      sections.forEach((section) => {
+        if (window.scrollY >= section.offsetTop - offset) {
+          current = section.id;
+        }
+      });
+
+      if (current) {
+        setActiveSection(current);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, []);
 
   return (
@@ -92,47 +94,43 @@ const Header = () => {
               </button>
             </>
           )}
+
           <nav className={`${styles.nav} ${open ? styles.openMobile : ""} `}>
             <NavLink
               type="link"
-              href="/main#about"
-              src={NavbarAcademicIcon}
-              alt="Ir para a sessão sobre mim"
+              href="#about"
+              icon={PersonStanding}
               text="Sobre Mim"
               active={activeSection === "about"}
             />
 
             <NavLink
               type="link"
-              href="/main#career"
-              src={NavbarHomeIcon}
-              alt="Ir par a sessão de carreira"
+              href="#career"
+              icon={BriefcaseBusiness}
               text="Carreira"
               active={activeSection === "career"}
             />
 
             <NavLink
               type="link"
-              href="/main#projects"
-              src={NavbarHomeIcon}
-              alt="Ir para a sessão de projetos"
+              href="#projects"
+              icon={FolderKanban}
               text="Projetos"
               active={activeSection === "projects"}
             />
 
             <NavLink
               type="link"
-              href="/main#contact"
-              src={NavbarHomeIcon}
-              alt="Ir para a sessão de contato"
+              href="#contact"
+              icon={Mail}
               text="Contato"
               active={activeSection === "contact"}
             />
             <NavLink
               type="button"
               href="none"
-              src={NavbarLanguageIcon}
-              alt="Alternar idioma"
+              icon={Languages}
               text="Português"
             />
             <div className={styles.languageSelector}>

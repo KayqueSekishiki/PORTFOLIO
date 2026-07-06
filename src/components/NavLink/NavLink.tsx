@@ -1,13 +1,11 @@
 "use client";
 import styles from "./NavLink.module.scss";
-import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 type NavLinkProps = {
   type: "link" | "button";
   href: string;
-  alt: string;
-  src: StaticImageData;
+  icon: React.ElementType;
   text: string;
   onClick?: () => void;
   active?: boolean;
@@ -16,8 +14,7 @@ type NavLinkProps = {
 const NavLink = ({
   type,
   href,
-  alt,
-  src,
+  icon: Icon,
   text,
   onClick,
   active,
@@ -27,12 +24,12 @@ const NavLink = ({
       href={href}
       className={`${styles.navLink} ${active ? styles.active : ""}`}
     >
-      <Image className={styles.linkImage} src={src} alt={alt} />
+      <Icon className={styles.icon} />
       {text}
     </Link>
   ) : (
     <button className={styles.navButton} onClick={onClick}>
-      <Image className={styles.linkImage} src={src} alt={alt} />
+      <Icon className={styles.icon} />
       {text}
     </button>
   );

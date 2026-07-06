@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2rem 2rem;
+  padding: 1.5rem 1.5rem;
 }
 
 .linkIcon {
@@ -31,8 +31,8 @@
 }
 
 .linkLogo {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   border: 0.2rem solid var(--neon-cyan);
   border-radius: 0.25rem;
   transition: transform 0.3s;
@@ -55,7 +55,7 @@
   transition: 0.3s ease;
 
   &:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     text-shadow: 0 0 10px var(--neon-cyan);
   }
 }
@@ -70,8 +70,8 @@
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-around;
-  padding: 8rem 1rem;
+  justify-content: space-between;
+  padding: 12rem 1rem;
   background: var(--bg-core);
   backdrop-filter: blur(10px);
   border-left: 1px solid var(--neon-cyan);
