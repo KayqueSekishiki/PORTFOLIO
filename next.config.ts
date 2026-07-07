@@ -1,8 +1,16 @@
 import type { NextConfig } from "next";
 
+const isGithubPages = process.env.NODE_ENV === "production";
+
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: "export",
+  trailingSlash: true,
+
+  basePath: isGithubPages ? "/PORTFOLIO" : "",
+  assetPrefix: isGithubPages ? "/PORTFOLIO/" : "",
+
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
@@ -14,6 +22,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+
   reactCompiler: true,
 };
 
