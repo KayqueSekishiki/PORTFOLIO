@@ -22,7 +22,7 @@ const en = {
     title: "ABOUT_ME",
     description:
       "Software engineer with experience in web applications. I mainly work with React, TypeScript and their frameworks, building modern, scalable and high-quality solutions. I am interested in fullstack web development, games, mobile applications and QA - Quality Assurance.",
-    highlight: "Some of my skills:",
+    skills: "Some of my skills:",
     showMore: "Show more",
     showLess: "Show less",
   },
