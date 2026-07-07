@@ -97,6 +97,7 @@ const ContactSection = () => {
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAB_EvBTRS197G64B2JQQcrsrOtx15at3nJOFlhYDINSpkzmySVbG0W0VoP67iDV-KL1GJA1vfMt91Ns-fca_Y6NsNAkIpp9g0I_TVezuz5LREWj4zQVShIEE8P5z5CDqPyVXvkfJL4947CLol57By2RGjp5hrBMJB7ZcPtO6ncoYtXRcUdP3wVU5HaE4lVJ4AaTrIOzDp6u4nUpz53ZMpK9Iwn7l9xyTta3LmRuHvWsVRoSbtkKc270EGgnpAI8AHw4F0cYHWJRH8H"
               alt="map"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className={styles.mapImage}
             />
 
