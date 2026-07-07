@@ -1,18 +1,30 @@
 "use client";
+
 import {
   useCallback,
   useEffect,
   useLayoutEffect,
+  useMemo,
   useRef,
   useState,
 } from "react";
-import styles from "./ProjectTabs.module.scss";
+
 import { ProjectCategory } from "@/types/project";
+
+import styles from "./ProjectTabs.module.scss";
+
 export type ProjectFilter = ProjectCategory | "all";
 
 type ProjectTabsProps = {
   selectedCategory: ProjectFilter;
   onSelectCategory: (category: ProjectFilter) => void;
+  labels: {
+    all: string;
+    web: string;
+    mobile: string;
+    games: string;
+    others: string;
+  };
 };
 
 type Indicator = {
@@ -21,33 +33,35 @@ type Indicator = {
   color: string;
 };
 
-const tabs: {
+const getTabs = (
+  labels: ProjectTabsProps["labels"],
+): {
   label: string;
   value: ProjectFilter;
   color: string;
-}[] = [
+}[] => [
   {
-    label: "TODOS",
+    label: labels.all,
     value: "all",
     color: "var(--neon-cyan)",
   },
   {
-    label: "WEB",
+    label: labels.web,
     value: "web",
     color: "var(--neon-purple)",
   },
   {
-    label: "MOBILE",
+    label: labels.mobile,
     value: "mobile",
     color: "var(--neon-amber)",
   },
   {
-    label: "GAMES",
+    label: labels.games,
     value: "games",
     color: "var(--neon-lime)",
   },
   {
-    label: "OUTROS",
+    label: labels.others,
     value: "others",
     color: "var(--neon-orange)",
   },
@@ -56,7 +70,10 @@ const tabs: {
 const ProjectTabs = ({
   selectedCategory,
   onSelectCategory,
+  labels,
 }: ProjectTabsProps) => {
+  const tabs = useMemo(() => getTabs(labels), [labels]);
+
   const containerRef = useRef<HTMLDivElement>(null);
 
   const buttonRefs = useRef<Partial<Record<ProjectFilter, HTMLButtonElement>>>(
@@ -68,6 +85,8 @@ const ProjectTabs = ({
     width: 0,
     color: "var(--neon-cyan)",
   });
+
+  const firstRender = useRef(true);
 
   const updateIndicator = useCallback(() => {
     const container = containerRef.current;
@@ -88,12 +107,14 @@ const ProjectTabs = ({
       color,
     });
 
-    button.scrollIntoView({
-      behavior: "smooth",
-      inline: "center",
-      block: "nearest",
+    container.scrollTo({
+      left:
+        button.offsetLeft - container.clientWidth / 2 + button.clientWidth / 2,
+      behavior: firstRender.current ? "instant" : "smooth",
     });
-  }, [selectedCategory]);
+
+    firstRender.current = false;
+  }, [selectedCategory, tabs]);
 
   useLayoutEffect(() => {
     updateIndicator();
@@ -147,4 +168,5 @@ const ProjectTabs = ({
     </div>
   );
 };
+
 export default ProjectTabs;

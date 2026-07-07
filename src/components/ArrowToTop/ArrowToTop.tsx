@@ -6,6 +6,8 @@ import { ArrowUp } from "lucide-react";
 
 import styles from "./ArrowToTop.module.scss";
 import ArrowUpIcon from "@/assets/arrow-up-icon.svg";
+import useLocale from "@/hooks/useLocale";
+import { getDictionary } from "@/lib/getDictionary";
 import { scrollToTop } from "@/utils/scrollToTop";
 
 type ArrowToTopProps = {
@@ -13,6 +15,9 @@ type ArrowToTopProps = {
 };
 
 const ArrowToTop = ({ variant }: ArrowToTopProps) => {
+  const locale = useLocale();
+  const dict = getDictionary(locale);
+
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -38,7 +43,7 @@ const ArrowToTop = ({ variant }: ArrowToTopProps) => {
       <Image
         className={styles.buttonIcon}
         src={ArrowUpIcon}
-        alt="Retornar ao início da página"
+        alt={dict.arrowToTop.alt}
       />
     ) : (
       <ArrowUp className={styles.icon} />
@@ -48,7 +53,7 @@ const ArrowToTop = ({ variant }: ArrowToTopProps) => {
     <button
       className={`${styles.cta} ${visible ? styles.visible : ""}`}
       onClick={scrollToTop}
-      aria-label="Retornar ao início da página"
+      aria-label={dict.arrowToTop.alt}
     >
       {icon}
     </button>

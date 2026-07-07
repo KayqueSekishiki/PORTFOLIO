@@ -1,5 +1,9 @@
 "use client";
+
+import useLocale from "@/hooks/useLocale";
+import { getDictionary } from "@/lib/getDictionary";
 import styles from "./Header.module.scss";
+import { usePathname, useRouter } from "next/navigation";
 import logo from "../../assets/ks.png";
 import Image from "next/image";
 import Link from "next/link";
@@ -17,13 +21,21 @@ const Header = () => {
   const [activeSection, setActiveSection] = useState("hero");
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+
   const toggleMenu = () => setOpen((prev) => !prev);
   const closeMenu = () => setOpen(false);
+
+  const locale = useLocale();
+  const dict = getDictionary(locale);
+
+  const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
     };
+
     handleScroll();
     window.addEventListener("scroll", handleScroll);
 
@@ -69,6 +81,41 @@ const Header = () => {
     };
   }, []);
 
+  useEffect(() => {
+    const scroll = sessionStorage.getItem("scroll-position");
+
+    if (scroll) {
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: Number(scroll),
+          behavior: "instant",
+        });
+
+        sessionStorage.removeItem("scroll-position");
+      });
+    }
+  }, [pathname]);
+
+  const changeLanguage = (language: "pt" | "en") => {
+    let path = pathname;
+
+    if (language === "en") {
+      if (!pathname.startsWith("/en")) {
+        path = `/en${pathname}`;
+      }
+    } else {
+      path = pathname.replace(/^\/en/, "") || "/";
+    }
+
+    sessionStorage.setItem("scroll-position", window.scrollY.toString());
+
+    router.push(path);
+  };
+
+  const toggleLanguage = () => {
+    changeLanguage(locale === "pt" ? "en" : "pt");
+  };
+
   return (
     <>
       <header
@@ -76,7 +123,7 @@ const Header = () => {
           ${styles.header}
           ${scrolled ? styles.headerScrolled : ""}
           ${open ? styles.headerOpen : ""}
-       `}
+        `}
       >
         <div className={styles.container}>
           {!open && (
@@ -95,12 +142,12 @@ const Header = () => {
             </>
           )}
 
-          <nav className={`${styles.nav} ${open ? styles.openMobile : ""} `}>
+          <nav className={`${styles.nav} ${open ? styles.openMobile : ""}`}>
             <NavLink
               type="link"
               href="#about"
               icon={PersonStanding}
-              text="Sobre Mim"
+              text={dict.header.about}
               active={activeSection === "about"}
             />
 
@@ -108,7 +155,7 @@ const Header = () => {
               type="link"
               href="#career"
               icon={BriefcaseBusiness}
-              text="Carreira"
+              text={dict.header.career}
               active={activeSection === "career"}
             />
 
@@ -116,7 +163,7 @@ const Header = () => {
               type="link"
               href="#projects"
               icon={FolderKanban}
-              text="Projetos"
+              text={dict.header.projects}
               active={activeSection === "projects"}
             />
 
@@ -124,29 +171,43 @@ const Header = () => {
               type="link"
               href="#contact"
               icon={Mail}
-              text="Contato"
+              text={dict.header.contact}
               active={activeSection === "contact"}
             />
+
             <NavLink
               type="button"
               href="none"
               icon={Languages}
-              text="Português"
+              text={dict.header.language}
+              onClick={toggleLanguage}
             />
+
             <div className={styles.languageSelector}>
               <button
-                className={`${styles.buttonLanguageSelector} ${styles.active}`}
+                className={`${styles.buttonLanguageSelector} ${
+                  locale === "pt" ? styles.active : ""
+                }`}
+                onClick={() => changeLanguage("pt")}
               >
                 PT
               </button>
 
               <span className={styles.separator}>|</span>
 
-              <button className={styles.buttonLanguageSelector}>EN</button>
+              <button
+                className={`${styles.buttonLanguageSelector} ${
+                  locale === "en" ? styles.active : ""
+                }`}
+                onClick={() => changeLanguage("en")}
+              >
+                EN
+              </button>
             </div>
           </nav>
         </div>
       </header>
+
       {open && <div className={styles.overlayMobile} onClick={closeMenu} />}
     </>
   );

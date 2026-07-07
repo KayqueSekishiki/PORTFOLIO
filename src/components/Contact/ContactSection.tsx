@@ -1,15 +1,21 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { Mail, SendHorizonal } from "lucide-react";
 import { TbBrandLinkedinFilled } from "react-icons/tb";
 import { FaGithub, FaWhatsapp } from "react-icons/fa6";
 
+import useLocale from "@/hooks/useLocale";
+import { getDictionary } from "@/lib/getDictionary";
+
 import styles from "./ContactSection.module.scss";
-import { useState } from "react";
 
 const ContactSection = () => {
+  const locale = useLocale();
+  const dict = getDictionary(locale);
+
   const [errors, setErrors] = useState({
     name: "",
     email: "",
@@ -51,19 +57,19 @@ const ContactSection = () => {
     };
 
     if (!formData.name.trim()) {
-      newErrors.name = "Informe um nome válido.";
+      newErrors.name = dict.contact.errors.name;
     }
 
     if (!formData.email.includes("@")) {
-      newErrors.email = "Informe um e-mail válido.";
+      newErrors.email = dict.contact.errors.email;
     }
 
     if (!formData.subject.trim()) {
-      newErrors.subject = "Informe um assunto.";
+      newErrors.subject = dict.contact.errors.subject;
     }
 
     if (formData.message.trim().length < 20) {
-      newErrors.message = "Sua mensagem deve possuir pelo menos 20 caracteres.";
+      newErrors.message = dict.contact.errors.message;
     }
 
     setErrors(newErrors);
@@ -78,13 +84,10 @@ const ContactSection = () => {
       <div className={styles.header}>
         <h2 className={styles.title}>
           <Mail size={40} />
-          VAMOS_CONVERSAR
+          {dict.contact.title}
         </h2>
 
-        <p className={styles.subtitle}>
-          Estou sempre aberto a novos projetos, colaborações ou apenas uma
-          conversa sobre café e código.
-        </p>
+        <p className={styles.subtitle}>{dict.contact.subtitle}</p>
       </div>
 
       <div className={styles.grid}>
@@ -100,7 +103,7 @@ const ContactSection = () => {
             <div className={styles.mapOverlay}>
               <div className={styles.locationTag}>
                 <div className={styles.ping} />
-                <span>LOCATED: BAHIA, BR</span>
+                <span>{dict.contact.location}</span>
               </div>
             </div>
           </div>
@@ -114,6 +117,7 @@ const ContactSection = () => {
               <div className={styles.iconContainer}>
                 <Mail size={28} />
               </div>
+
               <div>
                 <span>Email</span>
                 <strong>hello.kayque@gmail.com</strong>
@@ -128,6 +132,7 @@ const ContactSection = () => {
               <div className={styles.iconContainer}>
                 <TbBrandLinkedinFilled size={28} />
               </div>
+
               <div>
                 <span>LinkedIn</span>
                 <strong>/kayque-sekishiki</strong>
@@ -142,6 +147,7 @@ const ContactSection = () => {
               <div className={styles.iconContainer}>
                 <FaGithub size={28} />
               </div>
+
               <div>
                 <span>GitHub</span>
                 <strong>@KayqueSekishiki</strong>
@@ -156,6 +162,7 @@ const ContactSection = () => {
               <div className={styles.iconContainer}>
                 <FaWhatsapp size={28} />
               </div>
+
               <div>
                 <span>WhatsApp</span>
                 <strong>+55 11 96251-5162</strong>
@@ -167,14 +174,15 @@ const ContactSection = () => {
         <div className={styles.formPanel}>
           <form className={styles.form} onSubmit={handleSubmit}>
             <div className={styles.field}>
-              <label>Nome</label>
+              <label>{dict.contact.form.name}</label>
+
               <input
                 className={errors.name ? styles.inputError : ""}
                 type="text"
                 name="name"
                 value={formData.name}
                 onChange={handleChange}
-                placeholder="Seu nome completo"
+                placeholder={dict.contact.form.namePlaceholder}
               />
 
               {errors.name && (
@@ -183,14 +191,15 @@ const ContactSection = () => {
             </div>
 
             <div className={styles.field}>
-              <label>Email</label>
+              <label>{dict.contact.form.email}</label>
+
               <input
                 className={errors.email ? styles.inputError : ""}
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="seu@email.com"
+                placeholder={dict.contact.form.emailPlaceholder}
               />
 
               {errors.email && (
@@ -199,14 +208,15 @@ const ContactSection = () => {
             </div>
 
             <div className={styles.field}>
-              <label>Assunto</label>
+              <label>{dict.contact.form.subject}</label>
+
               <input
                 className={errors.subject ? styles.inputError : ""}
                 type="text"
                 name="subject"
                 value={formData.subject}
                 onChange={handleChange}
-                placeholder="O que você precisa?"
+                placeholder={dict.contact.form.subjectPlaceholder}
               />
 
               {errors.subject && (
@@ -215,14 +225,15 @@ const ContactSection = () => {
             </div>
 
             <div className={styles.field}>
-              <label>Mensagem</label>
+              <label>{dict.contact.form.message}</label>
+
               <textarea
                 className={errors.message ? styles.inputError : ""}
                 name="message"
                 rows={8}
                 value={formData.message}
                 onChange={handleChange}
-                placeholder="Escreva sua mensagem aqui..."
+                placeholder={dict.contact.form.messagePlaceholder}
               />
 
               {errors.message && (
@@ -231,7 +242,7 @@ const ContactSection = () => {
             </div>
 
             <button className={styles.button} type="submit">
-              <span>ENVIAR MENSAGEM</span>
+              <span>{dict.contact.form.button}</span>
               <SendHorizonal size={18} />
             </button>
           </form>

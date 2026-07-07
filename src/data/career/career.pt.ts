@@ -1,6 +1,6 @@
 import { Career } from "@/types/career";
 
-export const careers: Career[] = [
+export const careersPT: Career[] = [
   {
     period: "jun 2026 - Atual",
     title: "Desenvolvedor Freelancer",
@@ -11,8 +11,8 @@ export const careers: Career[] = [
     technologies: [
       "React",
       "React Native",
-      "Javascript",
-      "Typescript",
+      "JavaScript",
+      "TypeScript",
       "Unity Engine",
       "Godot Engine",
     ],

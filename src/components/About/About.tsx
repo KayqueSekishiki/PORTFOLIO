@@ -1,15 +1,26 @@
 "use client";
+
 import { useState } from "react";
 import Image from "next/image";
 import { PersonStanding } from "lucide-react";
-import styles from "./About.module.scss";
+
 import { technologies } from "@/data/technologies";
+import useLocale from "@/hooks/useLocale";
+import { getDictionary } from "@/lib/getDictionary";
+
 import PrimaryButton from "../PrimaryButton/PrimaryButton";
 import SecondaryButton from "../SecondaryButton/SecondaryButton";
 
+import styles from "./About.module.scss";
+
 const About = () => {
   const [showAll, setShowAll] = useState(false);
+
+  const locale = useLocale();
+  const dict = getDictionary(locale);
+
   const visibleTechnologies = showAll ? technologies : technologies.slice(0, 8);
+
   const profileSRC = "https://avatars.githubusercontent.com/u/104032451?v=4";
 
   return (
@@ -33,18 +44,13 @@ const About = () => {
         <div className={styles.content}>
           <h2 className={styles.title}>
             <PersonStanding size={40} />
-            SOBRE_MIM
+            {dict.about.title}
           </h2>
 
           <p className={styles.description}>
-            Engenheiro de software com experiência em aplicações web. trabalho
-            principalmente com React, Typescript e seus frameworks construindo
-            soluções modernas, escalaveis de alta qualidade. Tenho interresse em
-            desenvolvimento web fullstack, jogos, aplicativos mobile e QA-
-            quality Assurancy .
-            <span className={styles.highlight}>
-              Algumas das minhas habilidades:
-            </span>
+            {dict.about.description}
+
+            <span className={styles.highlight}>{dict.about.skills}</span>
           </p>
 
           <div className={styles.skills}>
@@ -62,8 +68,8 @@ const About = () => {
             <div className={styles.buttonWrapper}>
               <PrimaryButton
                 variant="button"
-                label={showAll ? "Mostrar menos" : "Mostrar mais"}
-                onClick={() => setShowAll(!showAll)}
+                label={showAll ? dict.about.showLess : dict.about.showMore}
+                onClick={() => setShowAll((prev) => !prev)}
               />
             </div>
           )}

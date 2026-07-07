@@ -1,20 +1,51 @@
 "use client";
+
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaWhatsapp } from "react-icons/fa6";
+
+import useLocale from "@/hooks/useLocale";
+import { getDictionary } from "@/lib/getDictionary";
+
 import styles from "./Footer.module.scss";
 
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  const locale = useLocale();
+  const dict = getDictionary(locale);
+
+  const links = [
+    {
+      href: "#hero",
+      label: dict.footer.home,
+    },
+    {
+      href: "#about",
+      label: dict.footer.about,
+    },
+    {
+      href: "#career",
+      label: dict.footer.career,
+    },
+    {
+      href: "#projects",
+      label: dict.footer.projects,
+    },
+    {
+      href: "#contact",
+      label: dict.footer.contact,
+    },
+  ];
+
   return (
     <footer className={styles.footer}>
       <div className={styles.container}>
         <nav className={styles.navigation}>
-          <Link href="#home">início</Link>
-          <Link href="#about">sobre mim</Link>
-          <Link href="#career">carreira</Link>
-          <Link href="#projects">projetos</Link>
-          <Link href="#contact">contato</Link>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         <div className={styles.social}>
@@ -44,11 +75,11 @@ const Footer = () => {
         </div>
 
         <nav className={`${styles.navigation} ${styles.active}`}>
-          <Link href="#home">início</Link>
-          <Link href="#about">sobre mim</Link>
-          <Link href="#career">carreira</Link>
-          <Link href="#projects">projetos</Link>
-          <Link href="#contact">contato</Link>
+          {links.map((link) => (
+            <Link key={link.href} href={link.href}>
+              {link.label}
+            </Link>
+          ))}
         </nav>
 
         <span>
