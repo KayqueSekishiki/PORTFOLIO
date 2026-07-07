@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import styles from "./SpecialButton.module.scss";
 import ArrowRightIcon from "@/assets/arrow-right-icon.svg";
 
@@ -8,14 +9,14 @@ type SpecialButtonProps = {
 
 const SpecialButton = ({ href }: SpecialButtonProps) => {
   return (
-    <a className={`${styles.cta}`} href={href} rel="noopener noreferrer">
-      Acessar
+    <Link className={styles.cta} href={href} rel="noopener noreferrer">
+      Enter Portfolio
       <Image
         className={styles.buttonIcon}
         src={ArrowRightIcon}
-        alt="Acessar Portfolio"
+        alt="Enter Portfolio"
       />
-    </a>
+    </Link>
   );
 };
 
