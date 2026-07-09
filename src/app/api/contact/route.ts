@@ -1,9 +1,23 @@
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(request: Request) {
   try {
+    const apiKey = process.env.RESEND_API_KEY;
+
+    if (!apiKey) {
+      return Response.json(
+        {
+          success: false,
+          message: "Resend API key not configured",
+        },
+        {
+          status: 500,
+        },
+      );
+    }
+
+    const resend = new Resend(apiKey);
+
     const { name, email, subject, message } = await request.json();
 
     if (!name || !email || !subject || !message) {
@@ -19,8 +33,8 @@ export async function POST(request: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
-      to: "kayquelopes@outlook.com.br",
+      from: "Portfolio <contatog@kayquesekishiki.dev>",
+      to: "kayque.cunha.dev@gmail.com",
       subject,
       replyTo: email,
       html: `
@@ -28,9 +42,7 @@ export async function POST(request: Request) {
           <h2>Novo contato pelo portfólio</h2>
 
           <p><strong>Nome:</strong> ${name}</p>
-
           <p><strong>Email:</strong> ${email}</p>
-
           <p><strong>Assunto:</strong> ${subject}</p>
 
           <hr>

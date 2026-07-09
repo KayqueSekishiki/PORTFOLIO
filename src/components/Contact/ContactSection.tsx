@@ -155,18 +155,14 @@ const ContactSection = () => {
           </div>
 
           <div className={styles.cards}>
-            <Link
-              className={styles.card}
-              href="mailto:kayque.cunha.dev@gmail.com"
-              target="_blank"
-            >
+            <Link className={styles.card} href="#contact-form">
               <div className={styles.iconContainer}>
                 <Mail size={28} />
               </div>
 
               <div>
                 <span>Email</span>
-                <strong>kayque.cunha.dev@gmail.com</strong>
+                <strong>contato@kayquesekishiki.dev</strong>
               </div>
             </Link>
 
@@ -218,7 +214,11 @@ const ContactSection = () => {
         </div>
 
         <div className={styles.formPanel}>
-          <form className={styles.form} onSubmit={handleSubmit}>
+          <form
+            id="contact-form"
+            className={styles.form}
+            onSubmit={handleSubmit}
+          >
             <div className={styles.field}>
               <label>{dict.contact.form.name}</label>
 
