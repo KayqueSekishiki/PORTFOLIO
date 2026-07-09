@@ -54,7 +54,7 @@ const ContactSection = () => {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     const newErrors = {
@@ -84,7 +84,17 @@ const ContactSection = () => {
 
     if (Object.values(newErrors).every((value) => value === "")) {
       try {
-        console.log(formData);
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        });
+
+        if (!response.ok) {
+          throw new Error("Erro ao enviar");
+        }
 
         setToast({
           show: true,
