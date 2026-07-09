@@ -1,0 +1,93 @@
+.toast {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  width: min(24rem, calc(100vw - 3rem));
+  padding: 1rem 1.25rem;
+
+  overflow: hidden;
+
+  border: 1px solid var(--border-neon);
+  border-radius: 0.75rem;
+
+  background: var(--surface-glass);
+  backdrop-filter: blur(16px);
+
+  animation: toastIn 0.35s ease;
+
+  z-index: 999;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.message {
+  flex: 1;
+
+  color: var(--text-core);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.closeButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  color: var(--text-dim);
+
+  transition: 0.25s;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--text-core);
+    transform: rotate(90deg);
+  }
+}
+
+.progress {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  animation: progress 4s linear forwards;
+}
+
+.success {
+  border-color: var(--neon-cyan);
+  box-shadow: var(--glow-cyan);
+
+  .icon {
+    color: var(--neon-cyan);
+  }
+}
+
+.error {
+  border-color: var(--neon-pink);
+  box-shadow: var(--glow-pink);
+
+  .icon {
+    color: var(--neon-pink);
+  }
+}
+
+.successProgress {
+  background: var(--neon-cyan);
+}
+
+.errorProgress {
+  background: var(--neon-pink);
+}

@@ -126,6 +126,10 @@
     text-transform: uppercase;
   }
 
+  strong {
+    font-size: 0.8125rem;
+  }
+
   &:hover {
     border-color: var(--neon-cyan);
     box-shadow: 0 0 1rem color-mix(in srgb, var(--neon-cyan) 25%, transparent);

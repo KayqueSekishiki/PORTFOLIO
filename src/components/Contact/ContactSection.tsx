@@ -10,6 +10,8 @@ import { FaGithub, FaWhatsapp } from "react-icons/fa6";
 import useLocale from "@/hooks/useLocale";
 import { getDictionary } from "@/lib/getDictionary";
 
+import ContactToast from "./ContactToast/ContactToast";
+
 import styles from "./ContactSection.module.scss";
 
 const ContactSection = () => {
@@ -27,6 +29,12 @@ const ContactSection = () => {
     name: "",
     email: "",
     subject: "",
+    message: "",
+  });
+
+  const [toast, setToast] = useState({
+    show: false,
+    type: "success" as "success" | "error",
     message: "",
   });
 
@@ -75,7 +83,34 @@ const ContactSection = () => {
     setErrors(newErrors);
 
     if (Object.values(newErrors).every((value) => value === "")) {
-      console.log(formData);
+      try {
+        console.log(formData);
+
+        setToast({
+          show: true,
+          type: "success",
+          message:
+            locale === "pt"
+              ? "Mensagem enviada com sucesso!"
+              : "Message sent successfully!",
+        });
+
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+      } catch {
+        setToast({
+          show: true,
+          type: "error",
+          message:
+            locale === "pt"
+              ? "Não foi possível enviar a mensagem."
+              : "Unable to send message.",
+        });
+      }
     }
   };
 
@@ -112,7 +147,7 @@ const ContactSection = () => {
           <div className={styles.cards}>
             <Link
               className={styles.card}
-              href="mailto:hello.kayque@gmail.com"
+              href="mailto:kayque.cunha.dev@gmail.com"
               target="_blank"
             >
               <div className={styles.iconContainer}>
@@ -121,7 +156,7 @@ const ContactSection = () => {
 
               <div>
                 <span>Email</span>
-                <strong>hello.kayque@gmail.com</strong>
+                <strong>kayque.cunha.dev@gmail.com</strong>
               </div>
             </Link>
 
@@ -249,6 +284,19 @@ const ContactSection = () => {
           </form>
         </div>
       </div>
+
+      {toast.show && (
+        <ContactToast
+          type={toast.type}
+          message={toast.message}
+          onClose={() =>
+            setToast((prev) => ({
+              ...prev,
+              show: false,
+            }))
+          }
+        />
+      )}
     </section>
   );
 };
