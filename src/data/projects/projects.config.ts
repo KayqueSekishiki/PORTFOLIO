@@ -26,14 +26,15 @@ import {
 } from "react-icons/tb";
 
 import emBreve from "@/assets/em-breve.jpg";
+import isadoramatos from "@/assets/projects/isadoramatos.png";
 
 export const projectConfig = [
   {
     id: 1,
     category: "web",
-    image: emBreve,
+    image: isadoramatos,
     technologies: [TbBrandNextjs, SiReact, TbBrandTypescript, FaSass],
-    demo: "#",
+    demo: "https://isadoramatos.vercel.app/",
   },
 
   {
@@ -41,7 +42,7 @@ export const projectConfig = [
     category: "mobile",
     image: emBreve,
     technologies: [TbBrandReactNative, DiSqllite],
-    demo: "#",
+    demo: "#https://isadoramatos.vercel.app/",
   },
 
   {

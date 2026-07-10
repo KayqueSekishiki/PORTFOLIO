@@ -1,8 +1,9 @@
 export const projectsEN = [
   {
     id: 1,
-    title: "Coming soon",
-    description: "There is nothing here yet.",
+    title: "Isadora | Nursing Technician",
+    description:
+      "Single-page website developed to strengthen the professional's digital presence, present services, and provide an easy direct contact channel.",
   },
 
   {
@@ -22,13 +23,6 @@ export const projectsEN = [
     title: "Coming soon",
     description: "There is nothing here yet.",
   },
-
-  //   {
-  //     id: 5,
-  //     title: "Isadora | Nursing Technician",
-  //     description:
-  //       "Single-page website developed to strengthen the professional's digital presence, present services, and provide an easy direct contact channel.",
-  //   },
 
   //   {
   //     id: 6,

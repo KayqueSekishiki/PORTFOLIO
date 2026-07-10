@@ -1,8 +1,9 @@
 export const projectsPT = [
   {
     id: 1,
-    title: "Em breve",
-    description: "Ainda não temos nada por aqui.",
+    title: "Isadora | Téc. de Enfermagem",
+    description:
+      "Página única desenvolvida para fortalecer a presença digital da profissional, apresentar seus serviços e oferecer um canal de contato direto e facilitado.",
   },
 
   {
@@ -22,13 +23,6 @@ export const projectsPT = [
     title: "Em breve",
     description: "Ainda não temos nada por aqui.",
   },
-
-  //   {
-  //     id: 5,
-  //     title: "Isadora | Téc. de Enfermagem",
-  //     description:
-  //       "Página única desenvolvida para fortalecer a presença digital da profissional, apresentar seus serviços e oferecer um canal de contato direto e facilitado.",
-  //   },
 
   //   {
   //     id: 6,
